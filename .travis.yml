@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install SPARQLwrapper pronto
+  - pip install pubrunner
+script:
+   - pubrunner --defaultsettings --test .
