@@ -1,0 +1,15 @@
+*.combined.txt
+hp.obo
+wikidata.json
+terms_cancer.txt
+terms_drugs.txt
+terms_drugs.wikidata.txt
+terms_drugs.inhibitors.txt
+terms_genes.txt
+terms_phenotype.txt
+terms_proteins.txt
+terms_umls.txt
+gene_info
+doid-non-classified.obo
+gene_info.gz
+gene_info

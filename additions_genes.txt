@@ -1,0 +1,46 @@
+HGNC:3236	EGFR	egf receptor|egf-r|epidermal growth factor (egf) receptor|receptor for the epidermal growth factor|receptor for epidermal growth factor|egf-receptor
+HGNC:3430	ERBB2	human epidermal growth factor receptor-2|epidermal growth factor receptor-2|epidermal growth factor receptor 2
+HGNC:1785	CDKN1B	p27 kip1
+HGNC:1097	BRAF	b-raf|b -raf|b - raf|b- raf|b raf|v-raf murine sarcoma viral oncogene homolog b|v-raf murine sarcoma viral oncogene homolog b1
+HGNC:7029	MET	mesenchymal-epithelial transition factor|mesenchymal epithelial transition factor|mesenchymal-epithelial-transition factor
+HGNC:18831	CTHRC1	collagen triple helix repeat containing-1
+HGNC:936	BAD	b cell lymphoma 2 (bcl-2)-associated death promoter|(bcl-2)-associated death promoter|bcl-2-associated death promoter|bcl-2 associated death promoter
+HGNC:12828	XRCC1	x-ray repair cross complementing 1|x-ray cross complementing 1|xray repair cross complementing 1|xray cross complementing 1
+HGNC:11820	TIMP1	timp-1
+HGNC:11821	TIMP2	timp-2
+HGNC:11822	TIMP3	timp-3
+HGNC:11823	TIMP4	timp-4
+HGNC:7155	MMP1	matrix metalloproteinase 1|matrix metalloproteinase-1
+HGNC:7156	MMP10	matrix metalloproteinase 10|matrix metalloproteinase-10
+HGNC:7157	MMP11	matrix metalloproteinase 11|matrix metalloproteinase-11
+HGNC:7158	MMP12	matrix metalloproteinase 12|matrix metalloproteinase-12
+HGNC:7159	MMP13	matrix metalloproteinase 13|matrix metalloproteinase-13
+HGNC:7160	MMP14	matrix metalloproteinase 14|matrix metalloproteinase-14
+HGNC:7161	MMP15	matrix metalloproteinase 15|matrix metalloproteinase-15
+HGNC:7162	MMP16	matrix metalloproteinase 16|matrix metalloproteinase-16
+HGNC:7163	MMP17	matrix metalloproteinase 17|matrix metalloproteinase-17
+HGNC:7165	MMP19	matrix metalloproteinase 19|matrix metalloproteinase-19
+HGNC:7166	MMP2	matrix metalloproteinase 2|matrix metalloproteinase-2
+HGNC:7167	MMP20	matrix metalloproteinase 20|matrix metalloproteinase-20
+HGNC:7171	MMP23B	matrix metalloproteinase 23b|matrix metalloproteinase-23b
+HGNC:7172	MMP24	matrix metalloproteinase 24|matrix metalloproteinase-24
+HGNC:7173	MMP3	matrix metalloproteinase 3|matrix metalloproteinase-3
+HGNC:7174	MMP7	matrix metalloproteinase 7|matrix metalloproteinase-7
+HGNC:7175	MMP8	matrix metalloproteinase 8|matrix metalloproteinase-8
+HGNC:7176	MMP9	matrix metalloproteinase 9|matrix metalloproteinase-9
+HGNC:14246	MMP25	matrix metalloproteinase 25|matrix metalloproteinase-25
+HGNC:14249	MMP26	matrix metalloproteinase 26|matrix metalloproteinase-26
+HGNC:14250	MMP27	matrix metalloproteinase 27|matrix metalloproteinase-27
+HGNC:14357	MMP21	matrix metalloproteinase 21|matrix metalloproteinase-21
+HGNC:14366	MMP28	matrix metalloproteinase 28|matrix metalloproteinase-28
+HGNC:6358	KLK10	kallikrein 10|normal epithelial cell-specific 1
+HGNC:3708	VEGFD	vegf-d
+HGNC:12680	VEGFA	vegf-a
+HGNC:12681	VEGFB	vegf-b
+HGNC:12682	VEGFC	vegf-c
+HGNC:9604	PTGS1	cyclooxygenase-1|cyclooxygenase 1
+HGNC:9605	PTGS2	cyclooxygenase-2|cyclooxygenase 2
+HGNC:7997	NRG1	heregulin
+HGNC:11766	TGFB1	tgfbeta1
+HGNC:11768	TGFB2	tgfbeta2
+HGNC:11769	TGFB3	tgfbeta3

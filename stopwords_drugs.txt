@@ -1,0 +1,173 @@
+5-methyluridine
+a	
+abc
+acid maltase
+acth
+adenine
+adenosine
+adenosine aminohydrolase
+adenosine deaminase
+adenosine monophosphate
+adipogenesis inhibitory factor
+adrenal
+adrenocorticotropic hormone
+adrenocorticotropin
+agif
+ala
+alanine
+alpha-1,4-glucosidase
+alpha-1-antitrypsin
+alpha-glucosidase
+antidiuretic hormone
+arg
+arginine
+arginine vasopressin
+arsb
+asn
+asp
+asparaginase
+asparagine
+aspartic acid
+atp
+becaplermin
+c	
+ccnu
+cd120b
+cepr
+coagulation factor ix
+c-sis
+cys
+cysteine
+cytidine
+cytosine
+da
+dcs
+deoxyadenosine
+deoxycytidine
+deoxyguanosine
+deoxyribonuclease i
+deoxyuridine
+dg
+dgla
+dmso
+dnase
+dnase i
+dt
+du
+edrf
+eptacog alfa
+estrogen
+factor i
+factor viii
+filgrastim
+folate
+folliculin
+g	
+gh-n
+gln
+glu
+glucagon
+glutamic acid
+glutamine
+glutathione
+gly
+glycine
+gm-csf
+gnrh
+granulocyte colony stimulating factor
+growth hormone 1
+guanine
+guanosine
+hbgf-7
+his
+histidine
+hyal-1
+icil-1ra
+iddm
+iddm1
+iddm2
+iduronate 2-sulfatase
+ifn-beta
+igf1
+igf-1
+il-11
+il-1ra
+il-1rn
+il-2
+ile
+ilpr
+irap
+irdn
+isoleucine
+lenograstim
+leu
+leucine
+liprin
+lsh-b
+luminal
+luteinizing hormone beta subunit
+lys
+lysine
+m5u	
+met
+methionine
+microplasmin
+mody10
+myotrophin
+napa
+nesp
+nitric oxide
+oprelvekin
+oxytocin
+parathormone
+parathyrin
+parathyroid hormone
+pdgf-2
+phe
+phenylalanine
+pituitary growth hormone
+plasma thromboplastin component
+platelet-derived growth factor beta polypeptide
+pluripoietin
+pro
+proline
+prolixin
+prostin
+ras
+sargramostim
+scop
+sec
+secretin
+selenocysteine
+separin
+ser
+serine
+sermorelin
+somatostatin
+somatostatin-14
+spca
+sperm adhesion molecule 1
+stimate
+tace
+t-cell growth factor
+tcgf
+thr
+threonine
+thymidine
+thymine
+thyroglobulin
+thyroid
+thyrotropin-releasing hormone
+t-pa
+trp
+tryptophan
+tumor necrosis factor receptor 2
+tyr
+tyrosine
+u	
+uracil
+uridine
+urokinase
+val
+valine
+vegf

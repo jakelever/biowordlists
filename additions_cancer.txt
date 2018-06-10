@@ -1,0 +1,1 @@
+	DOID:0050745	diffuse large B-cell lymphoma	dlbcl|dlbl
