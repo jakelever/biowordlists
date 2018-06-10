@@ -83,6 +83,7 @@ if __name__ == '__main__':
 				customDeletions[termid] += terms.split('|')
 
 	print("Processing")
+	skipCount = 0
 	with codecs.open(args.ncbiGeneInfoFile,'r','utf8') as ncbiF:
 		for line in ncbiF:
 			split = line.rstrip('\n\r').split('\t')
@@ -108,7 +109,7 @@ if __name__ == '__main__':
 						hugo_id = dbXref[5:]
 
 				if hugo_id is None:
-					print("Skipping %s as no HUGO id is found" % symbol)
+					skipCount += 1
 					continue
 
 				# Gather up the names from the NCBI file
@@ -151,6 +152,7 @@ if __name__ == '__main__':
 					gene = (numeric_id,hugo_id,symbol,noDuplicates,entrez_gene_id)
 					genes.append(gene)
 
+	print("%d items skipped as no HUGO ID could be found" % skipCount)
 	genes = sorted(genes)
 
 	with codecs.open(args.outFile,'w','utf8') as outF:
