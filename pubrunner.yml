@@ -4,12 +4,14 @@ url: https://github.com/jakelever/biowordlists
 resources:
    all:
       - DISEASE_ONTOLOGY
-      - NCBI_GENE
    full:
       - METATHESAURUS
+      - NCBI_GENE
    test:
       - METATHESAURUS_EMPTY:
          rename: METATHESAURUS 
+      - NCBI_GENE_TEST:
+         rename: NCBI_GENE
 run:
    - cat stopwords_cancers.txt stopwords_selected.txt | sort -u > {OUT:stopwords_cancers.combined.txt}
    - cat stopwords_genes.txt stopwords_selected.txt | sort -u > {OUT:stopwords_genes.combined.txt}
