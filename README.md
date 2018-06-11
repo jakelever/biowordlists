@@ -14,9 +14,17 @@ This project uses the [PubRunner](https://github.com/jakelever/pubrunner) framew
 
 **Cancers:** This is a list of specific cancer types from the [Disease Ontology](http://disease-ontology.org/). General cancer terms have been removed and synonyms added from the UMLS Metathesaurus.
 
-## Running It
+**Variants:** Common mutations, aberrations and other 'omic events that may occur to a gene, especially in the cancer setting.
 
-The key dependencies are [PubRunner](https://github.com/jakelever/pubrunner) and the [UMLS Metathesaurus](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html). You can install PubRunner through [pip](https://pypi.org/). After installing the UMLS Metathesaurus (using Metamorphsys), you need to edit [resources/METATHESAURUS.yml](https://github.com/jakelever/biowordlists/blob/master/resources/METATHESAURUS.yml) to point towards your local instance. Then you can execute the command below:
+**Conflicting:** Several common biomedical terms that are easily confused with other useful concepts. An examples is "Cox Regression". This list is used to identify these to reduce ambiguity.
+
+## Dependencies
+
+The dependencies are [PubRunner](https://github.com/jakelever/pubrunner) and the [UMLS Metathesaurus](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html). You can install PubRunner through [pip](https://pypi.org/). After installing the UMLS Metathesaurus (using Metamorphsys), you need to edit [resources/METATHESAURUS.yml](https://github.com/jakelever/biowordlists/blob/master/resources/METATHESAURUS.yml) to point towards your local instance. PubRunner will manage the download of other dependencies (such as the NCBI Gene files and the Disease Ontology).
+
+## Executing it
+
+To generate the latest version of the wordlists, you can execute the command below:
 
 ```
 pubrunner .
@@ -27,6 +35,16 @@ There is also a test mode (that is used for the [TravisCI](https://travis-ci.org
 ```
 pubrunner --test .
 ```
+
+## Individual Scripts
+
+The [scripts/](https://github.com/jakelever/biowordlists/tree/master/scripts) directory contains all the scripts for generating the wordlists. Check the [pubrunner.yml](https://github.com/jakelever/biowordlists/blob/master/pubrunner.yml) file for example usage for each script.
+
+## Additional Files
+
+The [custom/](https://github.com/jakelever/biowordlists/tree/master/custom) directory contains additions, deletions and stopwords for the different term types.
+
+The [predefined/](https://github.com/jakelever/biowordlists/tree/master/predefined) directory contains several fully defined word-lists that do not need to be auto-generated. These are the variants, conflicting and a small section of the drug list.
 
 ## Contributing
 
