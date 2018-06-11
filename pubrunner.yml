@@ -16,16 +16,16 @@ run:
    - cat custom/stopwords_cancers.txt custom/stopwords_selected.txt | sort -u > {OUT:stopwords_cancers.combined.txt}
    - cat custom/stopwords_genes.txt custom/stopwords_selected.txt | sort -u > {OUT:stopwords_genes.combined.txt}
    - cat custom/stopwords_drugs.txt custom/stopwords_selected.txt | sort -u > {OUT:stopwords_drugs.combined.txt}
-   - python scripts/generateCancerTerms.py --diseaseOntologyFile {IN:DISEASE_ONTOLOGY/doid.obo} --cancerStopwords {IN:stopwords_cancers.combined.txt} --umlsConceptFile {IN:METATHESAURUS/MRCONSO.RRF} --customAdditions custom/additions_cancer.txt --customDeletions custom/deletions_cancer.txt --outFile {OUT:terms_cancers.txt}
-   - python scripts/generateGeneTerms.py --ncbiGeneInfoFile {IN:NCBI_GENE/gene_info} --umlsConceptFile {IN:METATHESAURUS/MRCONSO.RRF} --geneStopwords {IN:stopwords_genes.combined.txt} --customAdditions custom/additions_genes.txt --customDeletions custom/deletions_genes.txt --outFile {OUT:terms_genes.txt}
-   - python scripts/generateDrugTerms_sparql.py --drugStopwords {IN:stopwords_drugs.combined.txt} --customAdditions custom/additions_drugs.txt --outFile {OUT:terms_drugs.wikidata.txt}
-   - python scripts/generateDrugTerms_geneinhibitors.py --geneTerms {IN:terms_genes.txt} --outFile {OUT:terms_drugs.inhibitors.txt}
-   - cat {IN:terms_drugs.wikidata.txt} {IN:terms_drugs.inhibitors.txt} predefined/terms_drugs.custom.txt > {OUT:terms_drugs.txt}
-   - cp predefined/terms_conflicting.txt {OUT:terms_conflicting.txt}
-   - cp predefined/terms_variants.txt {OUT:terms_variants.txt}
+   - python scripts/generateCancerTerms.py --diseaseOntologyFile {IN:DISEASE_ONTOLOGY/doid.obo} --cancerStopwords {IN:stopwords_cancers.combined.txt} --umlsConceptFile {IN:METATHESAURUS/MRCONSO.RRF} --customAdditions custom/additions_cancer.tsv --customDeletions custom/deletions_cancer.tsv --outFile {OUT:terms_cancers.tsv}
+   - python scripts/generateGeneTerms.py --ncbiGeneInfoFile {IN:NCBI_GENE/gene_info} --umlsConceptFile {IN:METATHESAURUS/MRCONSO.RRF} --geneStopwords {IN:stopwords_genes.combined.txt} --customAdditions custom/additions_genes.tsv --customDeletions custom/deletions_genes.tsv --outFile {OUT:terms_genes.tsv}
+   - python scripts/generateDrugTerms_sparql.py --drugStopwords {IN:stopwords_drugs.combined.txt} --customAdditions custom/additions_drugs.tsv --outFile {OUT:terms_drugs.wikidata.tsv}
+   - python scripts/generateDrugTerms_geneinhibitors.py --geneTerms {IN:terms_genes.tsv} --outFile {OUT:terms_drugs.inhibitors.tsv}
+   - cat {IN:terms_drugs.wikidata.tsv} {IN:terms_drugs.inhibitors.tsv} predefined/terms_drugs.custom.tsv > {OUT:terms_drugs.tsv}
+   - cp predefined/terms_conflicting.tsv {OUT:terms_conflicting.tsv}
+   - cp predefined/terms_variants.tsv {OUT:terms_variants.tsv}
 output:
-   - terms_cancers.txt
-   - terms_genes.txt
-   - terms_drugs.txt
-   - terms_conflicting.txt
-   - terms_variants.txt
+   - terms_cancers.tsv
+   - terms_genes.tsv
+   - terms_drugs.tsv
+   - terms_conflicting.tsv
+   - terms_variants.tsv
