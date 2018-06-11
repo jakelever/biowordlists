@@ -13,16 +13,16 @@ resources:
       - NCBI_GENE_TEST:
          rename: NCBI_GENE
 run:
-   - cat stopwords_cancers.txt stopwords_selected.txt | sort -u > {OUT:stopwords_cancers.combined.txt}
-   - cat stopwords_genes.txt stopwords_selected.txt | sort -u > {OUT:stopwords_genes.combined.txt}
-   - cat stopwords_drugs.txt stopwords_selected.txt | sort -u > {OUT:stopwords_drugs.combined.txt}
-   - python generateCancerTerms.py --diseaseOntologyFile {IN:DISEASE_ONTOLOGY/doid.obo} --cancerStopwords {IN:stopwords_cancers.combined.txt} --umlsConceptFile {IN:METATHESAURUS/MRCONSO.RRF} --customAdditions additions_cancer.txt --customDeletions deletions_cancer.txt --outFile {OUT:terms_cancers.txt}
-   - python generateGeneTerms.py --ncbiGeneInfoFile {IN:NCBI_GENE/gene_info} --umlsConceptFile {IN:METATHESAURUS/MRCONSO.RRF} --geneStopwords {IN:stopwords_genes.combined.txt} --customAdditions additions_genes.txt --customDeletions deletions_genes.txt --outFile {OUT:terms_genes.txt}
-   - python generateDrugTerms_sparql.py --drugStopwords {IN:stopwords_drugs.combined.txt} --customAdditions additions_drugs.txt --outFile {OUT:terms_drugs.wikidata.txt}
-   - python generateDrugTerms_geneinhibitors.py --geneTerms {IN:terms_genes.txt} --outFile {OUT:terms_drugs.inhibitors.txt}
-   - cat {IN:terms_drugs.wikidata.txt} {IN:terms_drugs.inhibitors.txt} terms_drugs.custom.txt > {OUT:terms_drugs.txt}
-   - cp terms_conflicting.txt {OUT:terms_conflicting.txt}
-   - cp terms_variants.txt {OUT:terms_variants.txt}
+   - cat custom/stopwords_cancers.txt custom/stopwords_selected.txt | sort -u > {OUT:stopwords_cancers.combined.txt}
+   - cat custom/stopwords_genes.txt custom/stopwords_selected.txt | sort -u > {OUT:stopwords_genes.combined.txt}
+   - cat custom/stopwords_drugs.txt custom/stopwords_selected.txt | sort -u > {OUT:stopwords_drugs.combined.txt}
+   - python scripts/generateCancerTerms.py --diseaseOntologyFile {IN:DISEASE_ONTOLOGY/doid.obo} --cancerStopwords {IN:stopwords_cancers.combined.txt} --umlsConceptFile {IN:METATHESAURUS/MRCONSO.RRF} --customAdditions custom/additions_cancer.txt --customDeletions custom/deletions_cancer.txt --outFile {OUT:terms_cancers.txt}
+   - python scripts/generateGeneTerms.py --ncbiGeneInfoFile {IN:NCBI_GENE/gene_info} --umlsConceptFile {IN:METATHESAURUS/MRCONSO.RRF} --geneStopwords {IN:stopwords_genes.combined.txt} --customAdditions custom/additions_genes.txt --customDeletions custom/deletions_genes.txt --outFile {OUT:terms_genes.txt}
+   - python scripts/generateDrugTerms_sparql.py --drugStopwords {IN:stopwords_drugs.combined.txt} --customAdditions custom/additions_drugs.txt --outFile {OUT:terms_drugs.wikidata.txt}
+   - python scripts/generateDrugTerms_geneinhibitors.py --geneTerms {IN:terms_genes.txt} --outFile {OUT:terms_drugs.inhibitors.txt}
+   - cat {IN:terms_drugs.wikidata.txt} {IN:terms_drugs.inhibitors.txt} predefined/terms_drugs.custom.txt > {OUT:terms_drugs.txt}
+   - cp predefined/terms_conflicting.txt {OUT:terms_conflicting.txt}
+   - cp predefined/terms_variants.txt {OUT:terms_variants.txt}
 output:
    - terms_cancers.txt
    - terms_genes.txt
