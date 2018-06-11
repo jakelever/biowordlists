@@ -21,3 +21,11 @@ run:
    - python generateDrugTerms_sparql.py --drugStopwords {IN:stopwords_drugs.combined.txt} --customAdditions additions_drugs.txt --outFile {OUT:terms_drugs.wikidata.txt}
    - python generateDrugTerms_geneinhibitors.py --geneTerms {IN:terms_genes.txt} --outFile {OUT:terms_drugs.inhibitors.txt}
    - cat {IN:terms_drugs.wikidata.txt} {IN:terms_drugs.inhibitors.txt} terms_drugs.custom.txt > {OUT:terms_drugs.txt}
+   - cp terms_conflicting.txt {OUT:terms_conflicting.txt}
+   - cp terms_variants.txt {OUT:terms_variants.txt}
+output:
+   - terms_cancers.txt
+   - terms_genes.txt
+   - terms_drugs.txt
+   - terms_conflicting.txt
+   - terms_variants.txt
