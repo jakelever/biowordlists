@@ -1,0 +1,4 @@
+name: UNIPROT
+type: remote
+url: ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz
+unzip: True
