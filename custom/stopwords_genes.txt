@@ -38,6 +38,7 @@ mir
 mri
 msv
 mtx1
+mucin
 mut
 myeloid/lymphoid leukemia
 nhs
@@ -48,16 +49,22 @@ pro
 promyelocytic leukemia
 psa
 ptc
+reg
+rna binding protein
 san
 scar
 ser
 spatial
+stat
 tdt
 thr
 traits
+transmembrane glycoprotein
 trp
 tsa
 tyr
 utr
 val
 warts
+cancer associated
+cancer associated gene

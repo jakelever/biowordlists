@@ -1,11 +1,36 @@
 import argparse
+import codecs
+from collections import defaultdict
 import xml.etree.cElementTree as etree
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser('Generate protein word-list based on UniProt data')
 	parser.add_argument('--uniprotXML',type=str,required=True,help='Uniprot XML file')
-	parser.add_argument('--outFile',type=str,required=True,help='Output file')
+	parser.add_argument('--proteinStopwords',required=True,type=str,help='Stopword file for proteins')
+	parser.add_argument('--customAdditions', required=False, type=str, help='Some custom additions to the wordlist')
+	parser.add_argument('--customDeletions', required=False, type=str, help='Some custom deletions from the wordlist')
+	parser.add_argument('--outFile', required=True, type=str, help='Path to output wordlist file')
 	args = parser.parse_args()
+
+	print("Loading stopwords...")
+	with codecs.open(args.proteinStopwords,'r','utf8') as f:
+		proteinStopwords = [ line.strip().lower() for line in f ]
+		proteinStopwords = set(proteinStopwords)
+
+	customAdditions = defaultdict(list)
+	if args.customAdditions:
+		print("Loading additions...")
+		with codecs.open(args.customAdditions,'r','utf-8') as f:
+			for line in f:
+				termid,singleterm,terms = line.strip().split('\t')
+				customAdditions[termid] += terms.split('|')
+	customDeletions = defaultdict(list)
+	if args.customDeletions:
+		print("Loading deletions...")
+		with codecs.open(args.customDeletions,'r','utf-8') as f:
+			for line in f:
+				termid,singleterm,terms = line.strip().split('\t')
+				customDeletions[termid] += terms.lower().split('|')
 
 	with open(args.uniprotXML, 'r') as openfile, open(args.outFile,'w') as outF:
 
@@ -45,6 +70,12 @@ if __name__ == '__main__':
 					trimProtein = [ x[:-len(" protein")] for x in allNames if x.lower().endswith(' protein') ]
 
 					allNames += trimProtein
+
+					allNames = [ x for x in allNames if not x.lower() in proteinStopwords ]
+
+					allNames += customAdditions[accession]
+
+					allNames = [ x for x in allNames if not x.lower() in customDeletions[accession] ]
 
 					allNames = sorted(list(set(allNames)))
 					if len(allNames) > 0:

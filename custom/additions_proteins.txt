@@ -1,0 +1,1 @@
+P16278	BGAL_HUMAN	beta-gal
