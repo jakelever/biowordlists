@@ -4,5 +4,5 @@ set -eu
 f=$1
 t=$2
 
-grep --color=auto -P "(\||^)$t(\||$)" $f
+grep -i --color=auto -P "(\||\t)$t(\||$)" $f
 
