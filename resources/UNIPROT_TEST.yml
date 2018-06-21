@@ -1,0 +1,4 @@
+name: UNIPROT_TEST
+type: remote
+url: http://bcgsc.ca/downloads/jlever/uniprot_test.tar.gz
+unzip: True
