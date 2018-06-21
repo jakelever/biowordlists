@@ -75,6 +75,7 @@ glycine
 gm-csf
 gnrh
 granulocyte colony stimulating factor
+growth hormone
 growth hormone 1
 guanine
 guanosine

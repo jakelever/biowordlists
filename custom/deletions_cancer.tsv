@@ -34,3 +34,42 @@ DOID:8567	Hodgkin's lymphoma	hodgkin
 DOID:8651	Hodgkin's granuloma	hodgkin|hodgkin's disease
 DOID:5411	lung oat cell carcinoma	small cell carcinomas
 DOID:0050902	medulloblastoma	pnet
+DOID:9538	multiple myeloma	myeloma
+DOID:3571	liver cancer	hepatoma
+DOID:9538	multiple myeloma	myelomas
+DOID:0050747	lymphoplasmacytic lymphoma	macroglobulinemia
+DOID:10747	lymphoid leukemia	lymphocytic leukemias
+DOID:8538	reticulosarcoma	large cell lymphomas
+DOID:7602	intracortical osteogenic sarcoma	conventional osteosarcomas
+DOID:7602	intracortical osteogenic sarcoma	conventional osteosarcoma
+DOID:0050745	diffuse large B-cell lymphoma	histiocytic lymphoma
+DOID:8675	lymphosarcoma	histiocytic lymphoma
+DOID:3571	liver cancer	hepatomas
+DOID:10747	lymphoid leukemia	lymphocytic leukemia
+DOID:4866	salivary gland adenoid cystic carcinoma	cylindroma
+DOID:5520	head and neck squamous cell carcinoma	carcinoma of the head and neck
+DOID:4450	renal cell carcinoma	kidney carcinoma
+DOID:7497	brain ependymoma	ependymal tumors
+DOID:1037	lymphoblastic leukemia	lymphoid leukaemia
+DOID:3512	neurofibrosarcoma	neurogenic sarcoma
+DOID:0050902	medulloblastoma	neuroectodermal neoplasms
+DOID:1192	peripheral nervous system neoplasm	nerve sheath tumours
+DOID:8538	reticulosarcoma	large cell lymphoma
+DOID:9119	acute myeloid leukemia	acute megakaryocytic leukemia
+DOID:0050747	lymphoplasmacytic lymphoma	macroglobulinaemia
+DOID:0060901	Waldenstroem's macroglobulinemia	lymphoplasmacytoid lymphoma
+DOID:0050745	diffuse large B-cell lymphoma	histiocytic lymphomas
+DOID:8675	lymphosarcoma	histiocytic lymphomas
+DOID:4866	salivary gland adenoid cystic carcinoma	cylindromas
+DOID:0050870	in situ pulmonary adenocarcinoma	bronchioalveolar carcinoma
+DOID:3948	adrenocortical carcinoma	adrenal cortex adenocarcinoma
+DOID:3721	plasmacytoma	solitary plasmacytoma of bone
+DOID:3721	plasmacytoma	plasma cell tumors
+DOID:5672	large intestine cancer	large bowel carcinoma
+DOID:4450	renal cell carcinoma	kidney carcinomas
+DOID:4450	renal cell carcinoma	carcinoma of kidney
+DOID:3721	plasmacytoma	plasma cell tumor
+DOID:10747	lymphoid leukemia	lymphocytic leukaemia
+DOID:4866	salivary gland adenoid cystic carcinoma	adenocystic carcinoma
+DOID:3512	neurofibrosarcoma	neurogenic sarcomas
+DOID:5672	large intestine cancer	large intestine carcinoma
