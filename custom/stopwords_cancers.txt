@@ -121,6 +121,7 @@ neoplastic progression
 neoplastic transformation
 nevi
 nfl
+nmtc1
 occipital lobe
 of lung adenocarcinoma
 of skin cancer
@@ -131,6 +132,7 @@ parametrium
 parathyroid gland
 paraurethral gland
 parietal lobe
+pgl1
 pineal gland
 pituitary gland
 pleura
