@@ -118,6 +118,7 @@ fus2
 gef
 genesis
 gep
+ggt
 glk
 gln
 glu
