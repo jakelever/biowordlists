@@ -160,7 +160,7 @@ if __name__ == '__main__':
 	print("Processing...")
 	allterms = []
 	# Skip down to the children of the cancer term and then find all their descendents (recursive children)
-	for term in cancerTerm.children.rchildren():
+	for term in cancerRoot.children.rchildren():
 		# Get the CUIDs for this term
 		cuids = getCUIDs(term)
 
