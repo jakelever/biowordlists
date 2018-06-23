@@ -61,23 +61,6 @@ def augmentTermList(terms):
 	merged = sorted(list(set(terms + tumourTerms + leukemiaTerms + plurals)))
 	return merged
 
-def findTerm(ont,name):
-	"""
-	Searches an ontology for a specific term name and returns the first hit
-
-	Args:
-		ont (pronto Ontology): Ontology to search
-		name (str): Search query
-
-	Returns:
-		pronto Ontology: Term that matched name or None if not found
-	"""
-	for term in ont:
-		if term.name == name:
-			return term
-	return None
-
-
 
 def getCUIDs(term):
 	"""
@@ -152,7 +135,7 @@ if __name__ == '__main__':
 
 	print("Loading disease ontology...")
 	ont = pronto.Ontology(args.diseaseOntologyFile)
-	cancerTerm = findTerm(ont,'cancer')
+	cancerRoot = ont.get('DOID:162')
 
 	print("Loading cancer stopwords...")
 	with codecs.open(args.cancerStopwords,'r','utf8') as f:
