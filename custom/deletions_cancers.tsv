@@ -13,6 +13,7 @@ DOID:0060901	Waldenstroem's macroglobulinemia	lymphoplasmacytoid lymphoma
 DOID:0080199	colorectal carcinoma	crc
 DOID:1037	lymphoblastic leukemia	lymphoid leukaemia
 DOID:10747	lymphoid leukemia	leukemia lymphoblastic|lymphoblastic leukemia
+DOID:10747	lymphoid leukemia	lymphoblastic leukaemia
 DOID:10747	lymphoid leukemia	lymphocytic leukaemia
 DOID:10747	lymphoid leukemia	lymphocytic leukemia
 DOID:10747	lymphoid leukemia	lymphocytic leukemias
@@ -50,7 +51,9 @@ DOID:5411	lung oat cell carcinoma	small cell carcinomas
 DOID:5411	lung oat cell carcinoma	small cell carcinoma|small cell carcinoma|sclc
 DOID:5520	head and neck squamous cell carcinoma	carcinoma of the head and neck
 DOID:5556	testicular malignant germ cell cancer	testicular ca. (no germ/tropho.)|testicular cancer|testicular cancer (excluding germ cell or trophoblastic cancer)|testicular cancers
+DOID:5603	acute T cell leukemia	adult t cell leukaemia
 DOID:5603	acute T cell leukemia	adult t-cell leukaemia
+DOID:5603	acute T cell leukemia	adult t-cell leukaemia-lymphoma
 DOID:5603	acute T cell leukemia	adult t-cell leukaemia/lymphoma
 DOID:5603	acute T cell leukemia	adult t cell leukemia|adult t-cell leukemia
 DOID:5603	acute T cell leukemia	adult t-cell leukemia-lymphoma
@@ -62,6 +65,8 @@ DOID:5672	large intestine cancer	large bowel carcinoma
 DOID:5672	large intestine cancer	large intestine carcinoma
 DOID:5709	mixed-type liposarcoma	myxoid liposarcoma|myxoid liposarcomas
 DOID:686	liver carcinoma	[m]hepatocellular carcinoma nos|carcinoma hepatocellular|carcinoma; hepatocellular|hcc - hepatocellular carcinoma|hcc - hepatocellular carcinomas|hepatocellular carcinoma|hepatocellular carcinoma (clinical)|hepatocellular carcinoma (morphologic abnormality)|hepatocellular carcinoma nos|hepatocellular carcinoma of liver|hepatocellular carcinoma of liver (diagnosis)|hepatocellular carcinomas|hepatocellular; carcinoma|hepatocellular; carcinomas|liver cell cancer (hepatocellular carcinoma)|hepatoma|hepatomas|hcc
+DOID:715	T-cell leukemia	adult t cell leukaemia
+DOID:715	T-cell leukemia	adult t-cell leukaemia
 DOID:715	T-cell leukemia	adult t cell leukemia|adult t-cell leukemia
 DOID:7497	brain ependymoma	ependymal tumors
 DOID:7519	endocervical carcinoma	endocervical adenocarcinoma|endocervical adenocarcinomas
@@ -90,3 +95,4 @@ DOID:9538	multiple myeloma	myeloma
 DOID:9538	multiple myeloma	myelomas
 DOID:9538	multiple myeloma	plasma cell neoplasms
 DOID:9952	acute lymphocytic leukemia	leukemia lymphoblastic|lymphoblastic leukemia
+DOID:9952	acute lymphocytic leukemia	lymphoblastic leukaemia

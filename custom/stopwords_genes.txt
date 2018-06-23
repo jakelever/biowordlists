@@ -72,6 +72,7 @@ cis
 cl2
 clamp
 clf
+clm
 clp
 cls
 com1
@@ -286,6 +287,8 @@ ramp
 rbp
 reg
 rho
+rig
+rig1
 rna binding protein
 rrp
 rsk
