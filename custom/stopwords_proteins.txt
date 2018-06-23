@@ -1,8 +1,8 @@
-stem cell
-stem cell protein
-super
-tumor suppressor
-stress-induced
-stress-induced protein
 cryptic
 cryptic protein
+stem cell
+stem cell protein
+stress-induced
+stress-induced protein
+super
+tumor suppressor

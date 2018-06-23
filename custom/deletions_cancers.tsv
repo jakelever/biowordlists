@@ -1,75 +1,75 @@
-DOID:5672	large intestine cancer	crc|adenocarcinomas colorectal|carcinoma colorectal|colorectal adenocarcinoma|colorectal adenocarcinomas|colorectal cancer|colorectal cancers|colorectal carcinoma|colorectal carcinomas|colorectal neoplasms malignant|malignant colorectal neoplasm|malignant colorectal neoplasms|malignant colorectal tumor|malignant colorectal tumors|malignant colorectal tumour|cancer of large colon|colon cancer|colon cancers
-DOID:3376	bone osteosarcoma	osteosarcoma
-DOID:1996	rectum adenocarcinoma	carcinoma of rectum|carcinoma rectal|carcinoma rectum|rectal carcinoma|rectal carcinomas|rectum carcinoma|rectum carcinomas
-DOID:4554	type C thymoma	thymic carcinoma
-DOID:5409	lung small cell carcinoma	small cell carcinoma|small cell carcinomas
-DOID:5411	lung oat cell carcinoma	small cell carcinoma|small cell carcinoma|sclc
-DOID:10747	lymphoid leukemia	leukemia lymphoblastic|lymphoblastic leukemia
-DOID:9952	acute lymphocytic leukemia	leukemia lymphoblastic|lymphoblastic leukemia
-DOID:5603	acute T cell leukemia	adult t cell leukemia|adult t-cell leukemia
-DOID:715	T-cell leukemia	adult t cell leukemia|adult t-cell leukemia
 DOID:0050523	adult T-cell leukemia	t-all
-DOID:3721	plasmacytoma	plasma cell neoplasms
-DOID:9538	multiple myeloma	plasma cell neoplasms
-DOID:8567	Hodgkin's lymphoma	hodgkin's paragranuloma|hodgkin's paragranulomas
-DOID:8651	Hodgkin's granuloma	hodgkin's paragranuloma|hodgkin's paragranulomas
+DOID:0050745	diffuse large B-cell lymphoma	histiocytic lymphoma
+DOID:0050745	diffuse large B-cell lymphoma	histiocytic lymphomas
+DOID:0050747	lymphoplasmacytic lymphoma	macroglobulinaemia
+DOID:0050747	lymphoplasmacytic lymphoma	macroglobulinemia
+DOID:0050865	tongue squamous cell carcinoma	[m]squamous cell carcinoma nos|[m]squamous cell carcinoma nos (morphologic abnormality)|carcinoma epidermoid|carcinoma squamous|epidermoid carcinoma|epidermoid carcinomas|malignant epidermoid cell neoplasm|malignant epidermoid cell neoplasms|malignant epidermoid cell tumor|malignant epidermoid cell tumors|malignant epidermoid cell tumour|malignant squamous cell neoplasm|malignant squamous cell neoplasms|malignant squamous cell tumor|malignant squamous cell tumors|malignant squamous cell tumour|planocellular carcinoma|planocellular carcinomas|scc - squamous cell carcinoma|scc - squamous cell carcinomas|squamous carcinoma|squamous carcinomas|squamous cell carcinoma|squamous cell carcinoma (diagnosis)|squamous cell carcinoma (disorder)|squamous cell carcinoma (morphologic abnormality)|squamous cell carcinoma nos|squamous cell carcinomas|squamous cell epithelioma|squamous cell epitheliomas
+DOID:0050870	in situ pulmonary adenocarcinoma	bronchioalveolar carcinoma
+DOID:0050902	medulloblastoma	neuroectodermal neoplasms
+DOID:0050902	medulloblastoma	pnet
+DOID:0060901	Waldenstroem's macroglobulinemia	lymphoplasmacytoid lymphoma
+DOID:0080199	colorectal carcinoma	crc
+DOID:1037	lymphoblastic leukemia	lymphoid leukaemia
+DOID:10747	lymphoid leukemia	leukemia lymphoblastic|lymphoblastic leukemia
+DOID:10747	lymphoid leukemia	lymphocytic leukaemia
+DOID:10747	lymphoid leukemia	lymphocytic leukemia
+DOID:10747	lymphoid leukemia	lymphocytic leukemias
+DOID:1192	peripheral nervous system neoplasm	nerve sheath tumours
+DOID:1192	peripheral nervous system neoplasm	neurofibromas
+DOID:1909	melanoma	cutaneous melanoma|cutaneous melanomas
+DOID:1996	rectum adenocarcinoma	carcinoma of rectum|carcinoma rectal|carcinoma rectum|rectal carcinoma|rectal carcinomas|rectum carcinoma|rectum carcinomas
 DOID:2871	endometrial carcinoma	endometrial cancer nos|endometrium cancer|endometrium cancers|endometrium--cancer|endometrium--cancers|uterine endometrial cancer|uterine endometrial cancers
 DOID:3008	invasive ductal carcinoma	breast cancer (ductal)|breast ductal carcinoma|breast ductal carcinomas|duct adenocarcinoma|duct adenocarcinomas|duct carcinoma|duct carcinomas|ductal adenocarcinoma|ductal adenocarcinomas|ductal breast carcinoma|ductal breast carcinomas|ductal carcinoma|ductal carcinoma of breast|ductal carcinoma of the breast|ductal carcinomas
-DOID:7519	endocervical carcinoma	endocervical adenocarcinoma|endocervical adenocarcinomas
-DOID:8651	Hodgkin's granuloma	adult hodgkin lymphoma|adult hodgkin lymphomas|adult hodgkin's lymphoma|adult hodgkin's lymphomas|adult hodgkins lymphoma|adult hodgkins lymphomas|hodgkin lymphoma|hodgkin lymphoma lymphocyte depleted|hodgkin lymphomas|hodgkin mixed cellularity lymphoma|hodgkin mixed cellularity lymphomas|hodgkin's disease/lymphoma|hodgkin's disease/lymphomas|hodgkin's lymphoma|hodgkin's lymphoma disease|hodgkin's lymphoma lymphocyte depleted|hodgkin's lymphoma mixed cellularity|hodgkin's lymphoma nos|hodgkin's lymphomas|hodgkin; lymphoma|hodgkin; lymphomas|hodgkins lymphoma|hodgkins lymphomas|lymphocyte depleted classical hodgkin lymphoma|lymphocyte depleted classical hodgkin lymphomas|lymphocyte depleted classical hodgkin's lymphoma|lymphocyte depleted classical hodgkin's lymphomas|lymphocyte depleted hodgkin lymphoma|lymphocyte depleted hodgkin lymphomas|lymphocyte depleted hodgkin's lymphoma|lymphocyte depleted hodgkin's lymphomas|lymphocyte depletion hodgkin's lymphoma|lymphocyte depletion hodgkin's lymphomas|lymphocyte rich classical hodgkin lymphoma|lymphocyte rich classical hodgkin lymphomas|lymphocyte rich classical hodgkin's lymphoma|lymphocyte rich classical hodgkin's lymphomas|lymphocyte rich hodgkin lymphoma|lymphocyte rich hodgkin lymphomas|lymphocyte rich hodgkin's lymphoma|lymphocyte rich hodgkin's lymphomas|lymphocyte-depleted classical hodgkin lymphoma|lymphocyte-depleted classical hodgkin lymphomas|lymphocyte-depleted hodgkin's lymphoma|lymphocyte-depleted hodgkin's lymphomas|lymphocyte-rich classical hodgkin lymphoma|lymphocyte-rich classical hodgkin lymphomas|lymphocyte-rich classical hodgkin's lymphoma|lymphocyte-rich classical hodgkin's lymphomas|lymphocyte-rich hodgkin lymphoma|lymphocyte-rich hodgkin lymphoma (diagnosis)|lymphocyte-rich hodgkin lymphomas|lymphoma; hodgkin|lymphoma;hodgkins|lymphomas hodgkin's disease|malignant hodgkin's lymphoma|malignant hodgkin's lymphomas|mixed cellularity classical hodgkin lymphoma|mixed cellularity classical hodgkin lymphomas|mixed cellularity hodgkin lymphoma|mixed cellularity hodgkin lymphomas|mixed cellularity hodgkin's lymphoma|mixed cellularity hodgkin's lymphomas|nodular lymphocyte predominant hodgkin lymphoma|nodular lymphocyte predominant hodgkin lymphomas|nodular lymphocyte predominant hodgkin's lymphoma|nodular lymphocyte predominant hodgkin's lymphomas|nodular lymphocyte-predominant hodgkin lymphoma|nodular lymphocyte-predominant hodgkin lymphomas|nodular lymphocyte-predominant hodgkin's lymphoma|nodular lymphocyte-predominant hodgkin's lymphomas|nodular sclerosing hodgkin's lymphoma|nodular sclerosing hodgkin's lymphomas
-DOID:5709	mixed-type liposarcoma	myxoid liposarcoma|myxoid liposarcomas
-DOID:4450	renal cell carcinoma	renal carcinoma|renal carcinomas
-DOID:0050865	tongue squamous cell carcinoma	[m]squamous cell carcinoma nos|[m]squamous cell carcinoma nos (morphologic abnormality)|carcinoma epidermoid|carcinoma squamous|epidermoid carcinoma|epidermoid carcinomas|malignant epidermoid cell neoplasm|malignant epidermoid cell neoplasms|malignant epidermoid cell tumor|malignant epidermoid cell tumors|malignant epidermoid cell tumour|malignant squamous cell neoplasm|malignant squamous cell neoplasms|malignant squamous cell tumor|malignant squamous cell tumors|malignant squamous cell tumour|planocellular carcinoma|planocellular carcinomas|scc - squamous cell carcinoma|scc - squamous cell carcinomas|squamous carcinoma|squamous carcinomas|squamous cell carcinoma|squamous cell carcinoma (diagnosis)|squamous cell carcinoma (disorder)|squamous cell carcinoma (morphologic abnormality)|squamous cell carcinoma nos|squamous cell carcinomas|squamous cell epithelioma|squamous cell epitheliomas
-DOID:5556	testicular malignant germ cell cancer	testicular ca. (no germ/tropho.)|testicular cancer|testicular cancer (excluding germ cell or trophoblastic cancer)|testicular cancers
-DOID:7843	female breast carcinoma	carcinoma of the breast
-DOID:1192	peripheral nervous system neoplasm	neurofibromas
-DOID:3565	meningioma	secretory meningioma|secretory meningiomas
-DOID:4960	bone marrow cancer	chronic myeloproliferative disease|chronic myeloproliferative disease (morphologic abnormality)|disease myeloproliferative|disease;myeloproliferative|diseases myeloproliferative|disorder myeloproliferative|disorders myeloproliferative|myeloproliferative dis|myeloproliferative disease|myeloproliferative disease (morphologic abnormality)|myeloproliferative disorder|myeloproliferative disorder (disorder)|myeloproliferative disorder (morphologic abnormality)|myeloproliferative disorder nos|myeloproliferative disorders|myeloproliferative disorders (incl. cml)|myeloproliferative disorders [disease/finding]|myeloproliferative neoplasm|myeloproliferative neoplasms|proliferation of myeloid cells
-DOID:0080199	colorectal carcinoma	crc
-DOID:686	liver carcinoma	[m]hepatocellular carcinoma nos|carcinoma hepatocellular|carcinoma; hepatocellular|hcc - hepatocellular carcinoma|hcc - hepatocellular carcinomas|hepatocellular carcinoma|hepatocellular carcinoma (clinical)|hepatocellular carcinoma (morphologic abnormality)|hepatocellular carcinoma nos|hepatocellular carcinoma of liver|hepatocellular carcinoma of liver (diagnosis)|hepatocellular carcinomas|hepatocellular; carcinoma|hepatocellular; carcinomas|liver cell cancer (hepatocellular carcinoma)|hepatoma|hepatomas|hcc
-DOID:1909	melanoma	cutaneous melanoma|cutaneous melanomas
+DOID:3376	bone osteosarcoma	osteosarcoma
 DOID:3376	bone osteosarcoma	osteosarcoma|osteosarcomas
-DOID:4440	seminoma	seminoma of testis|seminoma of testis (diagnosis)|seminoma of testis (disorder)|seminoma of the testis|seminoma testicular cancer|seminoma testicular cancers|seminoma testis|testicular seminoma|testicular seminoma (pure)|testicular seminoma pure|testicular seminoma pure nos|testicular seminomas
-DOID:8567	Hodgkin's lymphoma	hodgkin
-DOID:8651	Hodgkin's granuloma	hodgkin|hodgkin's disease
-DOID:5411	lung oat cell carcinoma	small cell carcinomas
-DOID:0050902	medulloblastoma	pnet
-DOID:9538	multiple myeloma	myeloma
-DOID:3571	liver cancer	hepatoma
-DOID:9538	multiple myeloma	myelomas
-DOID:0050747	lymphoplasmacytic lymphoma	macroglobulinemia
-DOID:10747	lymphoid leukemia	lymphocytic leukemias
-DOID:8538	reticulosarcoma	large cell lymphomas
-DOID:7602	intracortical osteogenic sarcoma	conventional osteosarcomas
-DOID:7602	intracortical osteogenic sarcoma	conventional osteosarcoma
-DOID:0050745	diffuse large B-cell lymphoma	histiocytic lymphoma
-DOID:8675	lymphosarcoma	histiocytic lymphoma
-DOID:3571	liver cancer	hepatomas
-DOID:10747	lymphoid leukemia	lymphocytic leukemia
-DOID:4866	salivary gland adenoid cystic carcinoma	cylindroma
-DOID:5520	head and neck squamous cell carcinoma	carcinoma of the head and neck
-DOID:4450	renal cell carcinoma	kidney carcinoma
-DOID:7497	brain ependymoma	ependymal tumors
-DOID:1037	lymphoblastic leukemia	lymphoid leukaemia
 DOID:3512	neurofibrosarcoma	neurogenic sarcoma
-DOID:0050902	medulloblastoma	neuroectodermal neoplasms
-DOID:1192	peripheral nervous system neoplasm	nerve sheath tumours
-DOID:8538	reticulosarcoma	large cell lymphoma
-DOID:9119	acute myeloid leukemia	acute megakaryocytic leukemia
-DOID:0050747	lymphoplasmacytic lymphoma	macroglobulinaemia
-DOID:0060901	Waldenstroem's macroglobulinemia	lymphoplasmacytoid lymphoma
-DOID:0050745	diffuse large B-cell lymphoma	histiocytic lymphomas
-DOID:8675	lymphosarcoma	histiocytic lymphomas
-DOID:4866	salivary gland adenoid cystic carcinoma	cylindromas
-DOID:0050870	in situ pulmonary adenocarcinoma	bronchioalveolar carcinoma
-DOID:3948	adrenocortical carcinoma	adrenal cortex adenocarcinoma
-DOID:3721	plasmacytoma	solitary plasmacytoma of bone
-DOID:3721	plasmacytoma	plasma cell tumors
-DOID:5672	large intestine cancer	large bowel carcinoma
-DOID:4450	renal cell carcinoma	kidney carcinomas
-DOID:4450	renal cell carcinoma	carcinoma of kidney
-DOID:3721	plasmacytoma	plasma cell tumor
-DOID:10747	lymphoid leukemia	lymphocytic leukaemia
-DOID:4866	salivary gland adenoid cystic carcinoma	adenocystic carcinoma
 DOID:3512	neurofibrosarcoma	neurogenic sarcomas
+DOID:3565	meningioma	secretory meningioma|secretory meningiomas
+DOID:3571	liver cancer	hepatoma
+DOID:3571	liver cancer	hepatomas
+DOID:3721	plasmacytoma	plasma cell neoplasms
+DOID:3721	plasmacytoma	plasma cell tumor
+DOID:3721	plasmacytoma	plasma cell tumors
+DOID:3721	plasmacytoma	solitary plasmacytoma of bone
+DOID:3948	adrenocortical carcinoma	adrenal cortex adenocarcinoma
+DOID:4440	seminoma	seminoma of testis|seminoma of testis (diagnosis)|seminoma of testis (disorder)|seminoma of the testis|seminoma testicular cancer|seminoma testicular cancers|seminoma testis|testicular seminoma|testicular seminoma (pure)|testicular seminoma pure|testicular seminoma pure nos|testicular seminomas
+DOID:4450	renal cell carcinoma	carcinoma of kidney
+DOID:4450	renal cell carcinoma	kidney carcinoma
+DOID:4450	renal cell carcinoma	kidney carcinomas
+DOID:4450	renal cell carcinoma	renal carcinoma|renal carcinomas
+DOID:4554	type C thymoma	thymic carcinoma
+DOID:4866	salivary gland adenoid cystic carcinoma	adenocystic carcinoma
+DOID:4866	salivary gland adenoid cystic carcinoma	cylindroma
+DOID:4866	salivary gland adenoid cystic carcinoma	cylindromas
+DOID:4960	bone marrow cancer	chronic myeloproliferative disease|chronic myeloproliferative disease (morphologic abnormality)|disease myeloproliferative|disease;myeloproliferative|diseases myeloproliferative|disorder myeloproliferative|disorders myeloproliferative|myeloproliferative dis|myeloproliferative disease|myeloproliferative disease (morphologic abnormality)|myeloproliferative disorder|myeloproliferative disorder (disorder)|myeloproliferative disorder (morphologic abnormality)|myeloproliferative disorder nos|myeloproliferative disorders|myeloproliferative disorders (incl. cml)|myeloproliferative disorders [disease/finding]|myeloproliferative neoplasm|myeloproliferative neoplasms|proliferation of myeloid cells
+DOID:5409	lung small cell carcinoma	small cell carcinoma|small cell carcinomas
+DOID:5411	lung oat cell carcinoma	small cell carcinomas
+DOID:5411	lung oat cell carcinoma	small cell carcinoma|small cell carcinoma|sclc
+DOID:5520	head and neck squamous cell carcinoma	carcinoma of the head and neck
+DOID:5556	testicular malignant germ cell cancer	testicular ca. (no germ/tropho.)|testicular cancer|testicular cancer (excluding germ cell or trophoblastic cancer)|testicular cancers
+DOID:5603	acute T cell leukemia	adult t cell leukemia|adult t-cell leukemia
+DOID:5672	large intestine cancer	crc|adenocarcinomas colorectal|carcinoma colorectal|colorectal adenocarcinoma|colorectal adenocarcinomas|colorectal cancer|colorectal cancers|colorectal carcinoma|colorectal carcinomas|colorectal neoplasms malignant|malignant colorectal neoplasm|malignant colorectal neoplasms|malignant colorectal tumor|malignant colorectal tumors|malignant colorectal tumour|cancer of large colon|colon cancer|colon cancers
+DOID:5672	large intestine cancer	large bowel carcinoma
 DOID:5672	large intestine cancer	large intestine carcinoma
+DOID:5709	mixed-type liposarcoma	myxoid liposarcoma|myxoid liposarcomas
+DOID:686	liver carcinoma	[m]hepatocellular carcinoma nos|carcinoma hepatocellular|carcinoma; hepatocellular|hcc - hepatocellular carcinoma|hcc - hepatocellular carcinomas|hepatocellular carcinoma|hepatocellular carcinoma (clinical)|hepatocellular carcinoma (morphologic abnormality)|hepatocellular carcinoma nos|hepatocellular carcinoma of liver|hepatocellular carcinoma of liver (diagnosis)|hepatocellular carcinomas|hepatocellular; carcinoma|hepatocellular; carcinomas|liver cell cancer (hepatocellular carcinoma)|hepatoma|hepatomas|hcc
+DOID:715	T-cell leukemia	adult t cell leukemia|adult t-cell leukemia
+DOID:7497	brain ependymoma	ependymal tumors
+DOID:7519	endocervical carcinoma	endocervical adenocarcinoma|endocervical adenocarcinomas
+DOID:7602	intracortical osteogenic sarcoma	conventional osteosarcoma
+DOID:7602	intracortical osteogenic sarcoma	conventional osteosarcomas
+DOID:7843	female breast carcinoma	carcinoma of the breast
+DOID:8538	reticulosarcoma	large cell lymphoma
+DOID:8538	reticulosarcoma	large cell lymphomas
+DOID:8567	Hodgkin's lymphoma	hodgkin
+DOID:8567	Hodgkin's lymphoma	hodgkin's paragranuloma|hodgkin's paragranulomas
+DOID:8651	Hodgkin's granuloma	adult hodgkin lymphoma|adult hodgkin lymphomas|adult hodgkin's lymphoma|adult hodgkin's lymphomas|adult hodgkins lymphoma|adult hodgkins lymphomas|hodgkin lymphoma|hodgkin lymphoma lymphocyte depleted|hodgkin lymphomas|hodgkin mixed cellularity lymphoma|hodgkin mixed cellularity lymphomas|hodgkin's disease/lymphoma|hodgkin's disease/lymphomas|hodgkin's lymphoma|hodgkin's lymphoma disease|hodgkin's lymphoma lymphocyte depleted|hodgkin's lymphoma mixed cellularity|hodgkin's lymphoma nos|hodgkin's lymphomas|hodgkin; lymphoma|hodgkin; lymphomas|hodgkins lymphoma|hodgkins lymphomas|lymphocyte depleted classical hodgkin lymphoma|lymphocyte depleted classical hodgkin lymphomas|lymphocyte depleted classical hodgkin's lymphoma|lymphocyte depleted classical hodgkin's lymphomas|lymphocyte depleted hodgkin lymphoma|lymphocyte depleted hodgkin lymphomas|lymphocyte depleted hodgkin's lymphoma|lymphocyte depleted hodgkin's lymphomas|lymphocyte depletion hodgkin's lymphoma|lymphocyte depletion hodgkin's lymphomas|lymphocyte rich classical hodgkin lymphoma|lymphocyte rich classical hodgkin lymphomas|lymphocyte rich classical hodgkin's lymphoma|lymphocyte rich classical hodgkin's lymphomas|lymphocyte rich hodgkin lymphoma|lymphocyte rich hodgkin lymphomas|lymphocyte rich hodgkin's lymphoma|lymphocyte rich hodgkin's lymphomas|lymphocyte-depleted classical hodgkin lymphoma|lymphocyte-depleted classical hodgkin lymphomas|lymphocyte-depleted hodgkin's lymphoma|lymphocyte-depleted hodgkin's lymphomas|lymphocyte-rich classical hodgkin lymphoma|lymphocyte-rich classical hodgkin lymphomas|lymphocyte-rich classical hodgkin's lymphoma|lymphocyte-rich classical hodgkin's lymphomas|lymphocyte-rich hodgkin lymphoma|lymphocyte-rich hodgkin lymphoma (diagnosis)|lymphocyte-rich hodgkin lymphomas|lymphoma; hodgkin|lymphoma;hodgkins|lymphomas hodgkin's disease|malignant hodgkin's lymphoma|malignant hodgkin's lymphomas|mixed cellularity classical hodgkin lymphoma|mixed cellularity classical hodgkin lymphomas|mixed cellularity hodgkin lymphoma|mixed cellularity hodgkin lymphomas|mixed cellularity hodgkin's lymphoma|mixed cellularity hodgkin's lymphomas|nodular lymphocyte predominant hodgkin lymphoma|nodular lymphocyte predominant hodgkin lymphomas|nodular lymphocyte predominant hodgkin's lymphoma|nodular lymphocyte predominant hodgkin's lymphomas|nodular lymphocyte-predominant hodgkin lymphoma|nodular lymphocyte-predominant hodgkin lymphomas|nodular lymphocyte-predominant hodgkin's lymphoma|nodular lymphocyte-predominant hodgkin's lymphomas|nodular sclerosing hodgkin's lymphoma|nodular sclerosing hodgkin's lymphomas
+DOID:8651	Hodgkin's granuloma	hodgkin|hodgkin's disease
+DOID:8651	Hodgkin's granuloma	hodgkin's paragranuloma|hodgkin's paragranulomas
+DOID:8675	lymphosarcoma	histiocytic lymphoma
+DOID:8675	lymphosarcoma	histiocytic lymphomas
+DOID:9119	acute myeloid leukemia	acute megakaryocytic leukemia
+DOID:9538	multiple myeloma	myeloma
+DOID:9538	multiple myeloma	myelomas
+DOID:9538	multiple myeloma	plasma cell neoplasms
+DOID:9952	acute lymphocytic leukemia	leukemia lymphoblastic|lymphoblastic leukemia
