@@ -1,5 +1,6 @@
 14-3-3
 aaa
+abc
 acc
 acca
 acs
@@ -65,6 +66,7 @@ ced
 chc
 chk
 chl
+chs
 cip
 cis
 cl2
@@ -84,10 +86,12 @@ csf
 csl
 csrp
 ctx
+cyp
 cyp2d
 cys
 dac
 dan
+daz
 dbm
 dd3
 delta
@@ -104,6 +108,7 @@ eif4f
 ema
 emt
 epp
+erf
 eva
 fbs
 fig
@@ -132,6 +137,7 @@ hcc-1
 hccr-2
 hcg
 hdmx
+helicase
 hep
 het
 hgfl
@@ -141,6 +147,7 @@ hnrnp
 homeobox
 homodimer
 hpp1
+hsp70
 hst
 hub
 iap
@@ -148,6 +155,7 @@ ibp
 idp
 ifna
 igh
+il-1
 ile
 imp
 inos
@@ -158,7 +166,9 @@ intermediate filament protein
 inv
 ips
 k12
+kallikrein
 kat
+kir
 kv11.1
 lad
 lan
@@ -228,12 +238,14 @@ p36
 p42
 P43
 P44
+p450
 p48
 P55
 p60
 P67
 p80
 p90
+pal
 pao
 papa
 par
@@ -303,6 +315,7 @@ stp
 syn
 taf
 tango
+tcp
 tdt
 tef3
 tem
@@ -319,6 +332,7 @@ trx
 tsa
 tsc
 tyr
+ugt
 utr
 val
 wagr
