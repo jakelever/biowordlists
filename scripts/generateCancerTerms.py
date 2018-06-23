@@ -38,6 +38,9 @@ def augmentTermList(terms):
 	
 	# Try the British spelling of tumor
 	tumourTerms = [ t.replace('tumor','tumour') for t in terms ]
+
+	# Try the alternative spelling of leukemia
+	leukemiaTerms = [ t.replace('leukemia','leukaemia') for t in terms ]
 	
 	# Terms that we can add an 'S' to pluralise (if not already included)
 	pluralEndings = ["tumor", "tumour", "neoplasm", "cancer", "oma"]
@@ -55,7 +58,7 @@ def augmentTermList(terms):
 			plurals.append(t + "s")
 
 	# Sorted and unique the terms back together
-	merged = sorted(list(set(terms + tumourTerms + plurals)))
+	merged = sorted(list(set(terms + tumourTerms + leukemiaTerms + plurals)))
 	return merged
 
 def findTerm(ont,name):
