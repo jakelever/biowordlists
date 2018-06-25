@@ -94,7 +94,7 @@ DOID:8675	lymphosarcoma	malignant lymphomas
 DOID:8675	lymphosarcoma	non-hodgkin lymphoma
 DOID:8675	lymphosarcoma	non-hodgkin lymphomas
 DOID:8747	subacute myeloid leukemia	atypical cml
-DOID:9119	acute myeloid leukemia	acute megakaryocytic leukemia
+DOID:9119	acute myeloid leukemia	acute megakaryocytic leukemia|acute megakaryocytic leukaemia
 DOID:9538	multiple myeloma	myeloma
 DOID:9538	multiple myeloma	myelomas
 DOID:9538	multiple myeloma	plasma cell neoplasms
