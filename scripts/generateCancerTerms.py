@@ -48,11 +48,7 @@ def augmentTermList(terms):
 	# Check if any term ends with one of the plural endings, and then pluralise it
 	plurals = []
 	for t in terms:
-		pluralize = False
-		for e in pluralEndings:
-			if t.endswith(e):
-				pluralize = True
-				break
+		pluralize = any( [ t.endswith(e) for e in pluralEndings ] )
 
 		if pluralize:
 			plurals.append(t + "s")
