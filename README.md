@@ -18,6 +18,8 @@ This project uses the [PubRunner](https://github.com/jakelever/pubrunner) framew
 
 **Conflicting:** Several common biomedical terms that are easily confused with other useful concepts. An examples is "Cox Regression". This list is used to identify these to reduce ambiguity.
 
+**Proteins:** Human protein names from [UniProt](https://www.uniprot.org/) with synonyms.
+
 ## Dependencies
 
 The dependencies are [PubRunner](https://github.com/jakelever/pubrunner) and the [UMLS Metathesaurus](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html). You can install PubRunner through [pip](https://pypi.org/). After installing the UMLS Metathesaurus (using Metamorphsys), you need to edit [resources/METATHESAURUS.yml](https://github.com/jakelever/biowordlists/blob/master/resources/METATHESAURUS.yml) to point towards your local instance. PubRunner will manage the download of other dependencies (such as the NCBI Gene files and the Disease Ontology).

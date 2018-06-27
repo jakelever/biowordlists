@@ -11,3 +11,5 @@ Each file is a tab-delimited file with one term per line. The first column is a 
 **terms_variants.tsv:** Common mutations, aberrations and other 'omic events that may occur to a gene, especially in the cancer setting.
 
 **terms_conflicting.tsv:** Several common biomedical terms that are easily confused with other useful concepts. An examples is "Cox Regression". This list is used to identify these to reduce ambiguity.
+
+**terms_proteins.tsv:** Human protein names from [UniProt](https://www.uniprot.org/) with synonyms.

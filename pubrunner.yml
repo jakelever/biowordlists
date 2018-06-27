@@ -1,6 +1,7 @@
 name: BioWordlists
 version: 0.1
 url: https://github.com/jakelever/biowordlists
+zenodo: 1286661
 resources:
    all:
       - DISEASE_ONTOLOGY
