@@ -62,7 +62,7 @@ if __name__ == '__main__':
 					alternativeNames = elem.findall('./{http://uniprot.org/uniprot}protein/{http://uniprot.org/uniprot}alternativeName/{http://uniprot.org/uniprot}fullName')
 					alternativeNames = [ x.text for x in alternativeNames ]
 
-					print(accession,name,recommendedNames,alternativeNames)
+					#print(accession,name,recommendedNames,alternativeNames)
 
 					allNames = [name] + recommendedNames + alternativeNames
 					allNames = [ x for x in allNames if len(x) >= 3 ]
