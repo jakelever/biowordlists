@@ -22,20 +22,22 @@ if __name__ == '__main__':
 	parser.add_argument('--outFile',type=str,required=True,help='File to output triples')
 	args = parser.parse_args()
 
-	drugTypeID = 'Q12140'
+	mainterm = {}
+	aliases = defaultdict(set)
 
 	print("Loading stopwords...")
 	with codecs.open(args.drugStopwords,'r','utf8') as f:
 		stopwords = [ line.strip().lower() for line in f ]
 		stopwords = set(stopwords)
 
-	customAdditions = defaultdict(list)
 	if args.customAdditions:
 		print("Loading additions...")
 		with codecs.open(args.customAdditions,'r','utf-8') as f:
 			for line in f:
 				termid,singleterm,terms = line.strip().split('\t')
-				customAdditions[termid] += terms.split('|')
+				mainterm[termid] = singleterm
+				aliases[termid].update(terms.split('|'))
+	
 	customDeletions = defaultdict(list)
 	if args.customDeletions:
 		print("Loading deletions...")
@@ -46,20 +48,22 @@ if __name__ == '__main__':
 
 	print("Gathering drugs and aliases from Wikidata")
 
+
+
+	rowCount = 0
+
+	medicationID = "Q12140"
+	instanceOfID = "P31"
+	subclassOfID = "P279"
+
 	query = """
 	SELECT ?item1 ?item1Label ?alias WHERE {
 		SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-		?item1 wdt:P31 wd:Q12140.
+		?item1 wdt:%s wd:%s.
 		OPTIONAL {?item1 skos:altLabel ?alias FILTER (LANG (?alias) = "en") .}
 	} 
+	""" % (instanceOfID,medicationID)
 
-	"""
-	#LIMIT 100000
-
-	mainterm = {}
-	aliases = defaultdict(set)
-
-	rowCount = 0
 	for row in runQuery(query):
 		#print(row)
 		drugID = row['item1']['value']
@@ -87,7 +91,6 @@ if __name__ == '__main__':
 
 			shortID = k.split('/')[-1]
 
-			combined += customAdditions[shortID]
 			combined = [ t for t in combined if not t in customDeletions[shortID] ]
 
 			combined = [ t.lower() for t in combined ]
