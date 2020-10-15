@@ -1,12 +1,19 @@
 # BioWordlists
 
-[![Travis CI](https://travis-ci.org/jakelever/biowordlists.svg?branch=master)](https://travis-ci.org/jakelever/biowordlists)
+<p>
+<a href="https://travis-ci.org/jakelever/biowordlists">
+   <img src="https://travis-ci.org/jakelever/biowordlists.svg?branch=master" />
+</a>
+<a href="https://doi.org/10.5281/zenodo.1286661">
+   <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.1286661.svg" />
+</a>
+</p>
 
 This is an ancillary repo for several other projects providing auto-generated wordlists with some additional curation. The topics are outlined below. The goal is to create a reliable set of wordlists for different biomedical topics for text mining purposes. In particular, lists are trimmed for stopwords and other common English words to reduce ambiguity. Contributions are greatly appreciated.
 
 Each of the generated wordlists is a tab-delimited file. The first column is a unique identifier, second is the name for the term, the third is a pipe-delimited list of synonyms.
 
-This project uses the [PubRunner](https://github.com/jakelever/pubrunner) framework to manage downloading the dependencies and executing the scripts. It then uploads them to [Zenodo](https://zenodo.org/) where they can be easily accessed by other projects.
+This project uses the [PubRunner](https://github.com/jakelever/pubrunner) framework to manage downloading the dependencies and executing the scripts. It then uploads them to [Zenodo](https://doi.org/10.5281/zenodo.1286661) where they can be easily accessed by other projects.
 
 **Genes:** This is a list of all human genes with synonyms. The first column is the [HUGO](https://www.genenames.org/) gene ID and the fourth column is the Entrez gene ID. Genes are built using the [NCBI Gene resource](https://www.ncbi.nlm.nih.gov/gene) with synonyms from the [UMLS Metathesaurus](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html).
 
