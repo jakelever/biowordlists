@@ -25,10 +25,10 @@ run:
    - python scripts/generateGeneTerms.py --ncbiGeneInfoFile {IN:NCBI_GENE/gene_info} --umlsConceptFile {IN:METATHESAURUS/MRCONSO.RRF} --geneStopwords {IN:stopwords_genes.combined.txt} --customAdditions custom/additions_genes.tsv --customDeletions custom/deletions_genes.tsv --outFile {OUT:terms_genes.tsv}
    - python scripts/generateDrugTerms_sparql.py --drugStopwords {IN:stopwords_drugs.combined.txt} --customAdditions custom/additions_drugs.tsv --customDeletions custom/deletions_drugs.tsv --outFile {OUT:terms_drugs.wikidata.tsv}
    - python scripts/generateDrugTerms_geneinhibitors.py --geneTerms {IN:terms_genes.tsv} --outFile {OUT:terms_drugs.inhibitors.tsv}
-   - python scripts/generateProteinTerms.py --uniprotXML {IN:UNIPROT/uniprot_sprot.xml} --proteinStopwords {IN:stopwords_proteins.combined.txt} --customAdditions custom/additions_proteins.tsv --outFile {OUT:terms_proteins.tsv}
    - cat {IN:terms_drugs.wikidata.tsv} {IN:terms_drugs.inhibitors.tsv} predefined/terms_drugs.custom.tsv > {OUT:terms_drugs.tsv}
    - cp predefined/terms_conflicting.tsv {OUT:terms_conflicting.tsv}
    - cp predefined/terms_variants.tsv {OUT:terms_variants.tsv}
+   - python scripts/generateProteinTerms.py --uniprotXML {IN:UNIPROT/uniprot_sprot.xml} --proteinStopwords {IN:stopwords_proteins.combined.txt} --customAdditions custom/additions_proteins.tsv --outFile {OUT:terms_proteins.tsv}
 output:
    - terms_cancers.tsv
    - terms_genes.tsv
