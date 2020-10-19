@@ -1,0 +1,15 @@
+{
+	"file_list": [
+		"working/terms_cancers.tsv",
+		"working/terms_genes.tsv",
+		"working/terms_drugs.tsv",
+		"working/terms_conflicting.tsv",
+		"working/terms_variants.tsv",
+		"working/terms_proteins.tsv"
+	],
+	"title": "BioWordlists",
+	"author": "Jake Lever",
+	"author_affiliation": "Stanford University",
+	"description_file": "output_description.md",
+	"existing_zenodo_id": "1286661"
+}

@@ -10,7 +10,9 @@ UNIPROT_URL=ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledg
 mkdir working
 cd working
 
-UMLSDIR=../umls/2020AA/META
+# Update this to point to the MRCONSO.RRF file
+UMLS_MRCONSO=../umls/2020AA/META/MRCONSO.RRF
+
 SCRIPTS=../scripts
 
 rm -f doid-non-classified.obo gene_info.gz gene_info uniprot_sprot.xml.gz uniprot_sprot.xml
@@ -33,9 +35,9 @@ cat stopwords_drugs.txt stopwords_selected.txt | sort -u > stopwords_drugs.combi
 cat stopwords_genes.txt stopwords_selected.txt | sort -u > stopwords_genes.combined.txt
 cat stopwords_proteins.txt stopwords_selected.txt | sort -u > stopwords_proteins.combined.txt
 
-python $SCRIPTS/generateCancerTerms.py --diseaseOntologyFile doid-non-classified.obo --cancerStopwords stopwords_cancers.combined.txt --umlsConceptFile $UMLSDIR/MRCONSO.RRF --customAdditions additions_cancers.tsv --customDeletions deletions_cancers.tsv --outFile terms_cancers.tsv
+python $SCRIPTS/generateCancerTerms.py --diseaseOntologyFile doid-non-classified.obo --cancerStopwords stopwords_cancers.combined.txt --umlsConceptFile $UMLS_MRCONSO --customAdditions additions_cancers.tsv --customDeletions deletions_cancers.tsv --outFile terms_cancers.tsv
 
-python $SCRIPTS/generateGeneTerms.py --ncbiGeneInfoFile gene_info --umlsConceptFile $UMLSDIR/MRCONSO.RRF --geneStopwords stopwords_genes.combined.txt --customAdditions additions_genes.tsv --customDeletions deletions_genes.tsv --outFile terms_genes.tsv
+python $SCRIPTS/generateGeneTerms.py --ncbiGeneInfoFile gene_info --umlsConceptFile $UMLS_MRCONSO --geneStopwords stopwords_genes.combined.txt --customAdditions additions_genes.tsv --customDeletions deletions_genes.tsv --outFile terms_genes.tsv
 
 python $SCRIPTS/generateDrugTerms_sparql.py --drugStopwords stopwords_drugs.combined.txt --customAdditions additions_drugs.tsv --outFile terms_drugs.wikidata.tsv
 python $SCRIPTS/generateDrugTerms_geneinhibitors.py --geneTerms terms_genes.tsv --outFile terms_drugs.inhibitors.tsv

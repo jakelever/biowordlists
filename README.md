@@ -13,7 +13,7 @@ This is an ancillary repo for several other projects providing auto-generated wo
 
 Each of the generated wordlists is a tab-delimited file. The first column is a unique identifier, second is the name for the term, the third is a pipe-delimited list of synonyms.
 
-This project uses the [PubRunner](https://github.com/jakelever/pubrunner) framework to manage downloading the dependencies and executing the scripts. It then uploads them to [Zenodo](https://doi.org/10.5281/zenodo.1286661) where they can be easily accessed by other projects.
+This project has a single main script (generate\_all) which runs all the other scripts. The output files of this project can be found at [Zenodo](https://doi.org/10.5281/zenodo.1286661) where they can be easily accessed by other projects.
 
 **Genes:** This is a list of all human genes with synonyms. The first column is the [HUGO](https://www.genenames.org/) gene ID and the fourth column is the Entrez gene ID. Genes are built using the [NCBI Gene resource](https://www.ncbi.nlm.nih.gov/gene) with synonyms from the [UMLS Metathesaurus](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html).
 
@@ -29,31 +29,30 @@ This project uses the [PubRunner](https://github.com/jakelever/pubrunner) framew
 
 ## Dependencies
 
-The dependencies are [PubRunner](https://github.com/jakelever/pubrunner) and the [UMLS Metathesaurus](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html). You can install PubRunner through [pip](https://pypi.org/). After installing the UMLS Metathesaurus (using Metamorphsys), you need to edit [resources/METATHESAURUS.yml](https://github.com/jakelever/biowordlists/blob/master/resources/METATHESAURUS.yml) to point towards your local instance. PubRunner will manage the download of other dependencies (such as the NCBI Gene files and the Disease Ontology).
+The only dependency that needs separate installation is the [UMLS Metathesaurus](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html). You can get the MRCONSO.RRF release for that. You must then update the **generate\_all.sh** to link the location of the MRCONSO file. The **generate\_all.sh** script manages the download of other resources, e.g. the Disease Ontology.
 
 ## Executing it
 
 To generate the latest version of the wordlists, you can execute the command below:
 
 ```
-pubrunner .
-```
-
-There is also a test mode (that is used for the [TravisCI](https://travis-ci.org/jakelever/biowordlists) test). It runs the same code but uses an empty UMLS metathesaurus and a tiny NCBI gene resource. To use it:
-
-```
-pubrunner --test .
+sh generate_all.sh
 ```
 
 ## Individual Scripts
 
-The [scripts/](https://github.com/jakelever/biowordlists/tree/master/scripts) directory contains all the scripts for generating the wordlists. Check the [pubrunner.yml](https://github.com/jakelever/biowordlists/blob/master/pubrunner.yml) file for example usage for each script.
+The [scripts/](https://github.com/jakelever/biowordlists/tree/master/scripts) directory contains all the scripts for generating the wordlists. Check the **generate\_all.sh** file for example usage for each script.
 
 ## Additional Files
 
 The [custom/](https://github.com/jakelever/biowordlists/tree/master/custom) directory contains additions, deletions and stopwords for the different term types.
 
 The [predefined/](https://github.com/jakelever/biowordlists/tree/master/predefined) directory contains several fully defined word-lists that do not need to be auto-generated. These are the variants, conflicting and a small section of the drug list.
+
+## Versions
+
+New versions are pushed to Zenodo roughly yearly. They will contain updates of all underlying resources. Other significant changes to versions are noted below.
+- **v4**: Removed dependency of PubRunner and made use of a simpler BASH script to download resources
 
 ## Contributing
 

@@ -13,3 +13,7 @@ gene_info
 doid-non-classified.obo
 gene_info.gz
 gene_info
+
+umls/
+working/
+
