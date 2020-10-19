@@ -3,33 +3,30 @@ set -eux
 set -o pipefail
 
 
-
-#DO_URL=https://raw.githubusercontent.com/DiseaseOntology/HumanDiseaseOntology/master/src/ontology/doid-non-classified.obo
 DO_URL=https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/main/src/ontology/doid-non-classified.obo?raw=true
 GENE_URL=ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene_info.gz
 UNIPROT_URL=ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz
 
-#mkdir working
+mkdir working
 cd working
 
 UMLSDIR=../umls/2020AA/META
-CUSTOM=../custom
 SCRIPTS=../scripts
 
-#rm -f doid-non-classified.obo gene_info.gz gene_info uniprot_sprot.xml.gz uniprot_sprot.xml
+rm -f doid-non-classified.obo gene_info.gz gene_info uniprot_sprot.xml.gz uniprot_sprot.xml
 
-#wget -O doid-non-classified.obo $DO_URL
+wget -O doid-non-classified.obo $DO_URL
 
-#wget -O gene_info.gz $GENE_URL
-#gunzip gene_info.gz
-#rm -f gene_info.gz
+wget -O gene_info.gz $GENE_URL
+gunzip gene_info.gz
+rm -f gene_info.gz
 
-#wget -O uniprot_sprot.xml.gz $UNIPROT_URL
-#gunzip uniprot_sprot.xml.gz
-#rm -f uniprot_sprot.xml.gz
+wget -O uniprot_sprot.xml.gz $UNIPROT_URL
+gunzip uniprot_sprot.xml.gz
+rm -f uniprot_sprot.xml.gz
 
-#ln -s ../custom/* .
-#ln -s ../predefined/* .
+ln -s ../custom/* .
+ln -s ../predefined/* .
 
 cat stopwords_cancers.txt stopwords_selected.txt | sort -u > stopwords_cancers.combined.txt
 cat stopwords_drugs.txt stopwords_selected.txt | sort -u > stopwords_drugs.combined.txt
