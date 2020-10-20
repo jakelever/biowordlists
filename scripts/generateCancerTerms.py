@@ -69,11 +69,10 @@ def getCUIDs(term):
 		list of CUIDs
 	"""
 	cuids = []
-	if 'xref' in term.other:
-		for xref in term.other['xref']:
-			if xref.startswith('UMLS_CUI'):
-				cuid = xref[9:]
-				cuids.append(cuid)
+	for xref in term.xrefs:
+		if xref.id.startswith('UMLS_CUI'):
+			cuid = xref.id[9:]
+			cuids.append(cuid)
 	return cuids
 
 def getSynonyms(term):
@@ -89,7 +88,7 @@ def getSynonyms(term):
 	synonyms = []
 	for s in term.synonyms:
 		if s.scope == 'EXACT':
-			synonyms.append(s.desc.lower())
+			synonyms.append(s.description.lower())
 	return synonyms
 
 def loadMetathesaurus(filename):
@@ -156,7 +155,13 @@ if __name__ == '__main__':
 	print("Processing...")
 	allterms = []
 	# Skip down to the children of the cancer term and then find all their descendents (recursive children)
-	for term in cancerRoot.children.rchildren():
+	cancerImmediateChildren = cancerRoot.subclasses(1)
+	cancerTypes = [ c for c in cancerRoot.subclasses() if not c in cancerImmediateChildren ]
+	for term in cancerTypes:
+		# Skip obsolete terms
+		if term.obsolete:
+			continue
+
 		# Get the CUIDs for this term
 		cuids = getCUIDs(term)
 
