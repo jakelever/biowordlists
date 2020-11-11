@@ -3,7 +3,6 @@ python:
   - "3.6"
 install:
   - pip install SPARQLwrapper pronto
-  - pip install pubrunner
 script:
    - mkdir -p umls/2020AA/META
    - touch umls/2020AA/META/MRCONSO.RRF
