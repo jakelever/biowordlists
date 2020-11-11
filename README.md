@@ -13,7 +13,7 @@ This is an ancillary repo for several other projects providing auto-generated wo
 
 Each of the generated wordlists is a tab-delimited file. The first column is a unique identifier, second is the name for the term, the third is a pipe-delimited list of synonyms.
 
-This project has a single main script (generate\_all) which runs all the other scripts. The output files of this project can be found at [Zenodo](https://doi.org/10.5281/zenodo.1286661) where they can be easily accessed by other projects.
+This project has a single main script (generate\_all.sh) which runs all the other scripts. The output files of this project can be found at [Zenodo](https://doi.org/10.5281/zenodo.1286661) where they can be easily accessed by other projects.
 
 **Genes:** This is a list of all human genes with synonyms. The first column is the [HUGO](https://www.genenames.org/) gene ID and the fourth column is the Entrez gene ID. Genes are built using the [NCBI Gene resource](https://www.ncbi.nlm.nih.gov/gene) with synonyms from the [UMLS Metathesaurus](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html).
 
