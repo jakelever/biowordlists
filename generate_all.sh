@@ -39,8 +39,8 @@ python $SCRIPTS/generateCancerTerms.py --diseaseOntologyFile doid-non-classified
 
 python $SCRIPTS/generateGeneTerms.py --ncbiGeneInfoFile gene_info --umlsConceptFile $UMLS_MRCONSO --geneStopwords stopwords_genes.combined.txt --customAdditions additions_genes.tsv --customDeletions deletions_genes.tsv --outFile terms_genes.tsv
 
-python $SCRIPTS/generateDrugTerms_sparql.py --drugStopwords stopwords_drugs.combined.txt --customAdditions additions_drugs.tsv --outFile terms_drugs.wikidata.tsv
-python $SCRIPTS/generateDrugTerms_geneinhibitors.py --geneTerms terms_genes.tsv --outFile terms_drugs.inhibitors.tsv
+python $SCRIPTS/generateDrugTerms_sparql.py --drugStopwords stopwords_drugs.combined.txt --customAdditions additions_drugs.tsv --customDeletions deletions_drugs.tsv --outFile terms_drugs.wikidata.tsv
+python $SCRIPTS/generateDrugTerms_geneinhibitors.py --geneTerms terms_genes.tsv --customDeletions deletions_drugs.tsv --outFile terms_drugs.inhibitors.tsv
 cat terms_drugs.wikidata.tsv terms_drugs.inhibitors.tsv terms_drugs.custom.tsv > terms_drugs.tsv
 
 python $SCRIPTS/generateProteinTerms.py --uniprotXML uniprot_sprot.xml --proteinStopwords stopwords_proteins.combined.txt --customAdditions additions_proteins.tsv --outFile terms_proteins.tsv
