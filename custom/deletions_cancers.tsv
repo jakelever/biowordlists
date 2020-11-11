@@ -100,3 +100,55 @@ DOID:9538	multiple myeloma	myelomas
 DOID:9538	multiple myeloma	plasma cell neoplasms
 DOID:9952	acute lymphocytic leukemia	leukemia lymphoblastic|lymphoblastic leukemia
 DOID:9952	acute lymphocytic leukemia	lymphoblastic leukaemia
+DOID:5604	adult acute lymphocytic leukemia	acute lymphoblastic leukaemia (all)
+DOID:5604	adult acute lymphocytic leukemia	acute lymphoblastic leukemia (all)
+DOID:0080794	childhood acute megakaryoblastic leukemia	acute megakaryoblastic leukemia
+DOID:0070323	childhood acute myeloid leukemia	acute myeloid leukaemia (aml)
+DOID:0070323	childhood acute myeloid leukemia	acute myeloid leukemia (aml)
+DOID:3076	adult astrocytic tumour	astrocytic tumor
+DOID:3079	juvenile astrocytoma	astrocytic tumor
+DOID:3076	adult astrocytic tumour	astrocytic tumors
+DOID:3079	juvenile astrocytoma	astrocytic tumors
+DOID:0050523	adult T-cell leukemia	atll
+DOID:7007	childhood cerebral astrocytoma	cerebral astrocytomas
+DOID:0050458	juvenile myelomonocytic leukemia	chronic myelomonocytic leukaemia
+DOID:6053	pediatric germ cell cancer	germ cell tumor
+DOID:6053	pediatric germ cell cancer	germ cell tumors
+DOID:0050523	adult T-cell leukemia	human t cell leukaemia
+DOID:3675	childhood kidney cancer	kidney neoplasm
+DOID:5672	large intestine cancer	large bowel cancer
+DOID:6658	pulmonary large cell neuroendocrine carcinoma	lcnec
+DOID:7757	childhood leukemia	leukaemia
+DOID:5709	mixed-type liposarcoma	myxoid/round cell liposarcoma
+DOID:5709	mixed-type liposarcoma	myxoid/round cell liposarcomas
+DOID:6084	pediatric ovarian germ cell tumor	ovarian germ cell tumors
+DOID:9550	indolent plasma cell myeloma	plasma cell myeloma
+DOID:0050902	medulloblastoma	primitive neuroectodermal tumor (pnet)
+DOID:5692	cellular myxoid liposarcoma	round cell liposarcoma
+DOID:5692	cellular myxoid liposarcoma	round cell liposarcomas
+DOID:0080639	bone sarcoma	skeletal sarcoma
+DOID:3637	childhood spinal cord tumor	spinal cord tumors
+DOID:5602	T-cell adult acute lymphocytic leukemia	t acute lymphoblastic leukaemia
+DOID:0050523	adult T-cell leukemia	t cell acute leukemia
+DOID:6082	pediatric testicular germ cell tumor	testicular germ cell tumor
+DOID:6082	pediatric testicular germ cell tumor	testicular germ cell tumors
+DOID:6082	pediatric testicular germ cell tumor	testicular germ cell tumour
+DOID:5348	adult endodermal sinus tumor	yolk sac tumor
+DOID:5348	adult endodermal sinus tumor	yolk sac tumors
+DOID:0080794	childhood acute megakaryoblastic leukemia	acute megakaryoblastic leukaemia
+DOID:4866	salivary gland adenoid cystic carcinoma	adenocystic carcinomas
+DOID:3076	adult astrocytic tumour	astrocytic tumour
+DOID:3079	juvenile astrocytoma	astrocytic tumour
+DOID:3675	childhood kidney cancer	kidney neoplasms
+DOID:5672	large intestine cancer	large bowel cancers
+DOID:6658	pulmonary large cell neuroendocrine carcinoma	large-cell neuroendocrine carcinoma
+DOID:7732	childhood malignant schwannoma	malignant peripheral nerve sheath tumour
+DOID:8369	adult malignant schwannoma	malignant peripheral nerve sheath tumour
+DOID:0050902	medulloblastoma	neuroectodermal tumour
+DOID:5058	rhabdoid meningioma	papillary meningioma
+DOID:5058	rhabdoid meningioma	papillary meningiomas
+DOID:0050902	medulloblastoma	primitive neuroectodermal tumour (pnet)
+DOID:4467	clear cell renal cell carcinoma	renal cell adenocarcinoma
+DOID:0080639	bone sarcoma	skeletal sarcomas
+DOID:5602	T-cell adult acute lymphocytic leukemia	t acute lymphoblastic leukemia
+DOID:5348	adult endodermal sinus tumor	yolk sac tumour
