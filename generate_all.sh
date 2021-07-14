@@ -11,7 +11,7 @@ mkdir working
 cd working
 
 # Update this to point to the MRCONSO.RRF file
-UMLS_MRCONSO=../umls/2020AA/META/MRCONSO.RRF
+UMLS_MRCONSO=../umls/2021AA/META/MRCONSO.RRF
 
 SCRIPTS=../scripts
 
