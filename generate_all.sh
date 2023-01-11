@@ -7,11 +7,11 @@ DO_URL=https://github.com/DiseaseOntology/HumanDiseaseOntology/blob/main/src/ont
 GENE_URL=ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene_info.gz
 UNIPROT_URL=ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz
 
+# Update this to point to the MRCONSO.RRF file
+UMLS_MRCONSO=$PWD/../umls/2022AB/META/MRCONSO.RRF
+
 mkdir working
 cd working
-
-# Update this to point to the MRCONSO.RRF file
-UMLS_MRCONSO=../umls/2021AA/META/MRCONSO.RRF
 
 SCRIPTS=../scripts
 
