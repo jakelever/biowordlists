@@ -37,10 +37,10 @@ def augmentTermList(terms):
 	terms = [ t for t in terms if not t.startswith('of ') ]
 	
 	# Try the British spelling of tumor
-	tumourTerms = [ t.replace('tumor','tumour') for t in terms ]
+	terms += [ t.replace('tumor','tumour') for t in terms ]
 
 	# Try the alternative spelling of leukemia
-	leukemiaTerms = [ t.replace('leukemia','leukaemia') for t in terms ]
+	terms += [ t.replace('leukemia','leukaemia') for t in terms ]
 	
 	# Terms that we can add an 'S' to pluralise (if not already included)
 	pluralEndings = ["tumor", "tumour", "neoplasm", "cancer", "oma"]
@@ -52,10 +52,9 @@ def augmentTermList(terms):
 
 		if pluralize:
 			plurals.append(t + "s")
+	terms = sorted(set(terms + plurals))
 
-	# Sorted and unique the terms back together
-	merged = sorted(list(set(terms + tumourTerms + leukemiaTerms + plurals)))
-	return merged
+	return terms
 
 
 def getCUIDs(term):
@@ -113,7 +112,8 @@ def loadMetathesaurus(filename):
 			meta[cuid].append(term)
 	return meta
 	
-if __name__ == '__main__':
+
+def main():
 
 	parser = argparse.ArgumentParser(description='Generate term list from Disease Ontology and UMLS Metathesarus for cancer-specific terms')
 	parser.add_argument('--diseaseOntologyFile', required=True, type=str, help='Path to the Disease Ontology OBO file')
@@ -137,13 +137,16 @@ if __name__ == '__main__':
 		cancerstopwords = [ line.strip().lower() for line in f ]
 		cancerstopwords = set(cancerstopwords)
 
-	customAdditions = defaultdict(list)
+	id_to_name = {}
+	id_to_synonyms = defaultdict(list)
 	if args.customAdditions:
 		print("Loading additions...")
 		with codecs.open(args.customAdditions,'r','utf-8') as f:
 			for line in f:
 				termid,singleterm,terms = line.strip().split('\t')
-				customAdditions[termid] += terms.split('|')
+				id_to_name[termid] = singleterm
+				id_to_synonyms[termid] += terms.split('|')
+
 	customDeletions = defaultdict(list)
 	if args.customDeletions:
 		print("Loading deletions...")
@@ -153,7 +156,7 @@ if __name__ == '__main__':
 				customDeletions[termid] += terms.split('|')
 
 	print("Processing...")
-	allterms = []
+
 	# Skip down to the children of the cancer term and then find all their descendents (recursive children)
 	cancerImmediateChildren = cancerRoot.subclasses(1)
 	cancerTypes = [ c for c in cancerRoot.subclasses() if not c in cancerImmediateChildren ]
@@ -183,11 +186,22 @@ if __name__ == '__main__':
 		# Add in the Disease Ontology term (in case it's not already in there)
 		mmterms.append(term.name)
 
-		# Add synonyms in the Disease Ontology term
+		# Add synonyms from the Disease Ontology term
 		mmterms += getSynonyms(term)
 
 		# Add in custom additions
-		mmterms += customAdditions[term.id]
+		mmterms += id_to_synonyms[term.id]
+
+		# Remove custom deletions
+		mmterms = [ mmterm for mmterm in mmterms if not mmterm in customDeletions[term.id] ]
+
+		if not term.id in id_to_name:
+			id_to_name[term.id] = term.name
+		id_to_synonyms[term.id] = mmterms
+	
+	allterms = []
+	for termid,name in id_to_name.items():
+		mmterms = id_to_synonyms[termid]
 
 		# Lowercase everything
 		mmterms = [ mmterm.lower() for mmterm in mmterms ]
@@ -199,14 +213,13 @@ if __name__ == '__main__':
 		mmterms = augmentTermList(mmterms)
 
 		# Remove custom deletions
-		mmterms = [ mmterm for mmterm in mmterms if not mmterm in customDeletions[term.id] ]
+		mmterms = [ mmterm for mmterm in mmterms if not mmterm in customDeletions[termid] ]
 
 		# Remove any duplicates and sort it
 		mmterms = sorted(list(set(mmterms)))
 
 		if len(mmterms) > 0:
-			tmpterm = (term.id, term.name, u"|".join(mmterms))
-			allterms.append(tmpterm)
+			allterms.append( (termid, name, "|".join(mmterms)) )
 
 	print("Post-filtering...")
 	mapping = defaultdict(list)
@@ -224,7 +237,7 @@ if __name__ == '__main__':
 		if 'carcinoma' in singleterm:
 			terms = [ t for t in terms if not ('cancer' in t and len(mapping[t]) > 1) ]
 
-		terms = [ t for t in terms if t==singleterm or not (t in properNames) ]
+		terms = [ t for t in terms if t==singleterm or t==(singleterm+'s') or not (t in properNames) ]
 		termtext = "|".join(terms)
 
 		if termtext != '':
@@ -242,5 +255,6 @@ if __name__ == '__main__':
 
 	print("Successfully output to %s" % args.outFile)
 
-		
+if __name__ == '__main__':
+	main()
 
