@@ -18,14 +18,8 @@ SCRIPTS=../scripts
 rm -f doid-non-classified.obo gene_info.gz gene_info uniprot_sprot.xml.gz uniprot_sprot.xml
 
 wget -O doid-non-classified.obo $DO_URL
-
 wget -O gene_info.gz $GENE_URL
-gunzip gene_info.gz
-rm -f gene_info.gz
-
 wget -O uniprot_sprot.xml.gz $UNIPROT_URL
-gunzip uniprot_sprot.xml.gz
-rm -f uniprot_sprot.xml.gz
 
 ln -s ../custom/* .
 ln -s ../predefined/* .
@@ -37,11 +31,11 @@ cat stopwords_proteins.txt stopwords_selected.txt | sort -u > stopwords_proteins
 
 python $SCRIPTS/generateCancerTerms.py --diseaseOntologyFile doid-non-classified.obo --cancerStopwords stopwords_cancers.combined.txt --umlsConceptFile $UMLS_MRCONSO --customAdditions additions_cancers.tsv --customDeletions deletions_cancers.tsv --outFile terms_cancers.tsv
 
-python $SCRIPTS/generateGeneTerms.py --ncbiGeneInfoFile gene_info --umlsConceptFile $UMLS_MRCONSO --geneStopwords stopwords_genes.combined.txt --customAdditions additions_genes.tsv --customDeletions deletions_genes.tsv --outFile terms_genes.tsv
+python $SCRIPTS/generateGeneTerms.py --ncbiGeneInfoFile gene_info.gz --umlsConceptFile $UMLS_MRCONSO --geneStopwords stopwords_genes.combined.txt --customAdditions additions_genes.tsv --customDeletions deletions_genes.tsv --outFile terms_genes.tsv
 
 python $SCRIPTS/generateDrugTerms_sparql.py --drugStopwords stopwords_drugs.combined.txt --customAdditions additions_drugs.tsv --customDeletions deletions_drugs.tsv --outFile terms_drugs.wikidata.tsv
 python $SCRIPTS/generateDrugTerms_geneinhibitors.py --geneTerms terms_genes.tsv --customDeletions deletions_drugs.tsv --outFile terms_drugs.inhibitors.tsv
 cat terms_drugs.wikidata.tsv terms_drugs.inhibitors.tsv terms_drugs.custom.tsv > terms_drugs.tsv
 
-python $SCRIPTS/generateProteinTerms.py --uniprotXML uniprot_sprot.xml --proteinStopwords stopwords_proteins.combined.txt --customAdditions additions_proteins.tsv --outFile terms_proteins.tsv
+python $SCRIPTS/generateProteinTerms.py --uniprotXML uniprot_sprot.xml.gz --proteinStopwords stopwords_proteins.combined.txt --customAdditions additions_proteins.tsv --outFile terms_proteins.tsv
 

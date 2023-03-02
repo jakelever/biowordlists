@@ -5,6 +5,7 @@ import argparse
 import sys
 import codecs
 from collections import defaultdict
+import gzip
 
 def cleanupQuotes(text):
 	"""
@@ -84,7 +85,7 @@ if __name__ == '__main__':
 
 	print("Processing")
 	skipCount = 0
-	with codecs.open(args.ncbiGeneInfoFile,'r','utf8') as ncbiF:
+	with gzip.open(args.ncbiGeneInfoFile,'rt',encoding='utf8') as ncbiF:
 		for line in ncbiF:
 			split = line.rstrip('\n\r').split('\t')
 
@@ -139,6 +140,10 @@ if __name__ == '__main__':
 				
 				# Remove instances with commas
 				allNames = [ x for x in allNames if not "," in x ]
+
+				# Remove any syndromes
+				endings_to_skip = ['syndrome','cancer','disease']
+				allNames = [ x for x in allNames if not any (x.lower().endswith(ending) for ending in endings_to_skip) ]
 
 				# Remove any duplicates
 				noDuplicates = sorted(list(set(allNames)))

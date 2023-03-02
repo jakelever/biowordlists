@@ -2,8 +2,9 @@ import argparse
 import codecs
 from collections import defaultdict
 import xml.etree.cElementTree as etree
+import gzip
 
-if __name__ == '__main__':
+def main():
 	parser = argparse.ArgumentParser('Generate protein word-list based on UniProt data')
 	parser.add_argument('--uniprotXML',type=str,required=True,help='Uniprot XML file')
 	parser.add_argument('--proteinStopwords',required=True,type=str,help='Stopword file for proteins')
@@ -32,7 +33,8 @@ if __name__ == '__main__':
 				termid,singleterm,terms = line.strip().split('\t')
 				customDeletions[termid] += terms.lower().split('|')
 
-	with open(args.uniprotXML, 'r') as openfile, open(args.outFile,'w') as outF:
+	print("Processing UniProt XML file...")
+	with gzip.open(args.uniprotXML, 'rt') as openfile, open(args.outFile,'w') as outF:
 
 		# Skip to the article element in the file
 		for event, elem in etree.iterparse(openfile, events=('start', 'end', 'start-ns', 'end-ns')):
@@ -90,4 +92,9 @@ if __name__ == '__main__':
 
 				elem.clear()
 
+
+	print("Done")
+
+if __name__ == '__main__':
+	main()
 
