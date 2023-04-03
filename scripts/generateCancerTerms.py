@@ -21,17 +21,14 @@ def augmentTermList(terms):
 	# Lower case everything (if not already done anyway)
 	terms = [ t.lower() for t in terms ]
 	
-	# A list of short cancer terms that are acceptable (others like ALL are too general and excluded)
+	# A list of short cancer terms that are acceptable (others like ALL are too ambiguous and excluded)
 	acceptedShortTerms = ["gbm","aml","crc","hcc","cll"]
 	
 	# Filter out smaller terms except the allowed ones
 	terms = [ t for t in terms if len(t) > 3 or t in acceptedShortTerms ]
 
-	# Filter out terms with a comma
-	terms = [ t for t in terms if not ',' in t ]
-
-	# Filter out terms with a semicolon
-	terms = [ t for t in terms if not ';' in t ]
+	# Filter out terms with various bits of punctuation
+	terms = [ t for t in terms if not any ( p in t for p in ',;()[]{}' ) ]
 
 	# Filter out terms that start with "of "
 	terms = [ t for t in terms if not t.startswith('of ') ]
@@ -41,9 +38,13 @@ def augmentTermList(terms):
 
 	# Try the alternative spelling of leukemia
 	terms += [ t.replace('leukemia','leukaemia') for t in terms ]
+
+	# Add some synonyms
+	synonym_groups = [ ['acute lymphocytic leukemia', 'acute lymphoblastic leukemia', 'acute lymphoid leukemia' ] ]
+	terms += [ t.replace(a,b) for t in terms for group in synonym_groups for a in group for b in group ]
 	
 	# Terms that we can add an 'S' to pluralise (if not already included)
-	pluralEndings = ["tumor", "tumour", "neoplasm", "cancer", "oma"]
+	pluralEndings = ["tumor", "tumour", "neoplasm", "cancer", "oma", "emia"]
 	
 	# Check if any term ends with one of the plural endings, and then pluralise it
 	plurals = []
@@ -209,11 +210,11 @@ def main():
 		# Filter out general terms
 		mmterms = [ mmterm for mmterm in mmterms if not mmterm in cancerstopwords ]
 
-		# Add extra spellings and plurals
-		mmterms = augmentTermList(mmterms)
-
 		# Remove custom deletions
 		mmterms = [ mmterm for mmterm in mmterms if not mmterm in customDeletions[termid] ]
+
+		# Add extra spellings and plurals
+		mmterms = augmentTermList(mmterms)
 
 		# Remove any duplicates and sort it
 		mmterms = sorted(list(set(mmterms)))
