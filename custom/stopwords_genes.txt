@@ -60,6 +60,7 @@ cancer associated
 cancer associated gene
 carp
 cas
+cbd
 cdf
 cdk4i
 ced
@@ -103,6 +104,7 @@ dr4
 drg-1
 dss
 dup
+efs
 eif2b
 eif4a
 eif4f
