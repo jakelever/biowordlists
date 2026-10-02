@@ -1,9 +1,6 @@
 # BioWordlists
 
 <p>
-<a href="https://travis-ci.org/jakelever/biowordlists">
-   <img src="https://travis-ci.org/jakelever/biowordlists.svg?branch=master" />
-</a>
 <a href="https://doi.org/10.5281/zenodo.1286661">
    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.1286661.svg" />
 </a>
