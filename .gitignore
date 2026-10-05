@@ -17,3 +17,5 @@ gene_info
 umls/
 working/
 
+__pycache__
+*.pyc
