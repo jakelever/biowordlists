@@ -3,14 +3,31 @@ import SPARQLWrapper
 import argparse
 import codecs
 import six
+import time
+import urllib.error
 from collections import defaultdict
 
-def runQuery(query):
+USER_AGENT = 'biowordlists/1.0 (https://github.com/jakelever/biowordlists; jake.lever@gmail.com)'
+
+def runQuery(query, maxAttempts=6):
 	endpoint = 'https://query.wikidata.org/sparql'
-	sparql = SPARQLWrapper.SPARQLWrapper(endpoint)
+	sparql = SPARQLWrapper.SPARQLWrapper(endpoint, agent=USER_AGENT)
 	sparql.setQuery(query)
 	sparql.setReturnFormat(SPARQLWrapper.JSON)
-	results = sparql.query().convert()
+
+	for attempt in range(1, maxAttempts + 1):
+		try:
+			results = sparql.query().convert()
+			break
+		except urllib.error.HTTPError as e:
+			if e.code not in (429, 503) or attempt == maxAttempts:
+				raise
+			try:
+				wait = int(e.headers.get('Retry-After'))
+			except (TypeError, ValueError):
+				wait = 65
+			print("  Wikidata returned HTTP %d (attempt %d/%d), retrying in %ds" % (e.code, attempt, maxAttempts, wait))
+			time.sleep(wait)
 
 	return results['results']['bindings']
 
