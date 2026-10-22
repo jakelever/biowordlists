@@ -159,3 +159,8 @@ DOID:2154	nephroblastoma	wilms tumor 1
 DOID:2998	testicular cancer	cancer testis
 DOID:3969	thyroid gland papillary carcinoma	pact
 DOID:0070327	melanoma in congenital melanocytic nevus	melanocytic nevi
+DOID:962	neurofibroma	neurofibromatosis
+DOID:3114	serous cystadenocarcinoma	serous carcinoma|serous carcinomas
+DOID:0050902	medulloblastoma	pnets
+DOID:3369	Ewing sarcoma	pnet
+DOID:5603	T-cell acute lymphoblastic leukemia	t-cell leukemia|t-cell leukemias|t-cell leukaemia|t-cell leukaemias
