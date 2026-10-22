@@ -164,3 +164,6 @@ DOID:3114	serous cystadenocarcinoma	serous carcinoma|serous carcinomas
 DOID:0050902	medulloblastoma	pnets
 DOID:3369	Ewing sarcoma	pnet
 DOID:5603	T-cell acute lymphoblastic leukemia	t-cell leukemia|t-cell leukemias|t-cell leukaemia|t-cell leukaemias
+DOID:4927	Klatskin's tumor	hcc
+DOID:8642	Hodgkin's paragranuloma	hodgins|hodgkin dis|hodgkin disease|hodgkin granuloma|hodgkin granulomas|hodgkin lymphoma|hodgkin lymphomas|hodgkin's disease|hodgkin's disease nos|hodgkin's lymphoma|hodgkin's lymphoma disease|hodgkin's lymphoma nos|hodgkin's lymphomas|hodgkin`s disease|hodgkins dis|hodgkins disease|hodgkins disease systemic|hodgkins diseases|hodgkins granuloma|hodgkins granulomas|hodgkins lymphoma|hodgkins lymphomas|lymphogranulomatosis|malignant granuloma|malignant granulomas|malignant lymphogranuloma|malignant lymphogranulomas|malignant lymphogranulomatosis
+DOID:3355	fibrosarcoma	infantile fibrosarcoma
