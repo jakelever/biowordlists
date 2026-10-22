@@ -72,14 +72,17 @@ if __name__ == '__main__':
 	medicationID = "Q12140"
 	instanceOfID = "P31"
 	subclassOfID = "P279"
+	hasUseID = "P366"
 
+	# Most drugs on Wikidata are no longer "instance of" medication (they are
+	# typically a "type of chemical entity"), but they do have "has use" medication
 	query = """
 	SELECT ?item1 ?item1Label ?alias WHERE {
 		SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-		?item1 wdt:%s wd:%s.
+		{ ?item1 wdt:%s wd:%s. } UNION { ?item1 wdt:%s wd:%s. }
 		OPTIONAL {?item1 skos:altLabel ?alias FILTER (LANG (?alias) = "en") .}
-	} 
-	""" % (instanceOfID,medicationID)
+	}
+	""" % (instanceOfID,medicationID,hasUseID,medicationID)
 
 	for row in runQuery(query):
 		#print(row)
