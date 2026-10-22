@@ -17,3 +17,7 @@ Q1592932	pegfilgrastim	g-csf
 Q3151081	filgrastim	g-csf
 Q269829	placebo	placebo|placebo effect|placebos
 Q23118	lysergic acid diethylamide	dots
+CUSTOM0002	chemotherapy	ctx
+Q106716137	mirimostim	m-csf
+Q106716579	nartograstim	g-csf
+Q24228917	pcsk9 inhibitors	monoclonal antibodies
