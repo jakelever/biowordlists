@@ -90,9 +90,11 @@ if __name__ == '__main__':
 		drugID = row['item1']['value'].split('/')[-1]
 
 		if 'xml:lang' in row['item1Label'] and row['item1Label']['xml:lang'] == 'en':
-			# Keep the main term from the custom additions if there is one
+			# Keep the main term from the custom additions if there is one (and the Wikidata label as a synonym)
 			if not drugID in mainterm:
 				mainterm[drugID] = row['item1Label']['value'].lower()
+			else:
+				aliases[drugID].add(row['item1Label']['value'].lower())
 
 			if 'alias' in row:
 				if row['alias']['xml:lang'] == 'en':
