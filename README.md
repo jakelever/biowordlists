@@ -50,6 +50,7 @@ The [predefined/](https://github.com/jakelever/biowordlists/tree/master/predefin
 
 New versions are pushed to Zenodo roughly yearly. They will contain updates of all underlying resources. Other significant changes to versions are noted below.
 - **v4**: Removed dependency of PubRunner and made use of a simpler BASH script to download resources
+- **v11**: Rebuilt with latest sources (UMLS 2026AA level 0), recovered Wikidata drugs via "has use: medication", fixed the empty protein list, and curated deletions/additions from a review of CancerMine and CIViCmine outputs
 
 ## Contributing
 
