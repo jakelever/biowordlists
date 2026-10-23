@@ -86,10 +86,13 @@ if __name__ == '__main__':
 
 	for row in runQuery(query):
 		#print(row)
-		drugID = row['item1']['value']
+		# Use the short ID (e.g. Q12345) so that these merge with any custom additions
+		drugID = row['item1']['value'].split('/')[-1]
 
 		if 'xml:lang' in row['item1Label'] and row['item1Label']['xml:lang'] == 'en':
-			mainterm[drugID] = row['item1Label']['value'].lower()
+			# Keep the main term from the custom additions if there is one
+			if not drugID in mainterm:
+				mainterm[drugID] = row['item1Label']['value'].lower()
 
 			if 'alias' in row:
 				if row['alias']['xml:lang'] == 'en':

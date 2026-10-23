@@ -4,6 +4,10 @@ from collections import defaultdict
 import xml.etree.cElementTree as etree
 import gzip
 
+# UniProt switched its XML namespace from http to https, so accept either
+UNIPROT_NAMESPACES = ['http://uniprot.org/uniprot','https://uniprot.org/uniprot']
+ENTRY_TAGS = [ '{%s}entry' % ns for ns in UNIPROT_NAMESPACES ]
+
 def main():
 	parser = argparse.ArgumentParser('Generate protein word-list based on UniProt data')
 	parser.add_argument('--uniprotXML',type=str,required=True,help='Uniprot XML file')
@@ -39,9 +43,10 @@ def main():
 		# Skip to the article element in the file
 		for event, elem in etree.iterparse(openfile, events=('start', 'end', 'start-ns', 'end-ns')):
 			#print(event,elem)
-			if event=='end' and elem.tag=='{http://uniprot.org/uniprot}entry':
+			if event=='end' and elem.tag in ENTRY_TAGS:
+				ns = elem.tag[:-len('entry')]
 			
-				taxonomies = elem.findall('./{http://uniprot.org/uniprot}organism/{http://uniprot.org/uniprot}dbReference')
+				taxonomies = elem.findall('./%sorganism/%sdbReference' % (ns,ns))
 				isHuman = False
 				for taxonomy in taxonomies:
 					if taxonomy.attrib['type'] == 'NCBI Taxonomy' and taxonomy.attrib['id'] == '9606':
@@ -49,19 +54,19 @@ def main():
 						break
 
 				if isHuman:
-					accessions = elem.findall('./{http://uniprot.org/uniprot}accession')
+					accessions = elem.findall('./%saccession' % ns)
 					accession = accessions[0].text
 
-					names = elem.findall('./{http://uniprot.org/uniprot}name')
+					names = elem.findall('./%sname' % ns)
 					assert len(names) == 1
 					name = names[0].text
 
 
 
-					recommendedNames = elem.findall('./{http://uniprot.org/uniprot}protein/{http://uniprot.org/uniprot}recommendedName/{http://uniprot.org/uniprot}fullName')
+					recommendedNames = elem.findall('./%sprotein/%srecommendedName/%sfullName' % (ns,ns,ns))
 					recommendedNames = [ x.text for x in recommendedNames ]
 					
-					alternativeNames = elem.findall('./{http://uniprot.org/uniprot}protein/{http://uniprot.org/uniprot}alternativeName/{http://uniprot.org/uniprot}fullName')
+					alternativeNames = elem.findall('./%sprotein/%salternativeName/%sfullName' % (ns,ns,ns))
 					alternativeNames = [ x.text for x in alternativeNames ]
 
 					#print(accession,name,recommendedNames,alternativeNames)
